@@ -32,8 +32,7 @@ public class Blob : MonoBehaviour {
             // randomDirectionVector = Vector3.Normalize(new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f)));
             // newPosition = (transform.position + randomDirectionVector)*0.7f;
 
-            transform.rotation = Quaternion.Euler(new Vector3(Random.Range(0f, 360f), 0f, 0f));
-
+            transform.rotation = Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 0f));
             timeStamp = 0f;
         }
 
