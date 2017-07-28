@@ -14,5 +14,11 @@ public class RedBlob :  Blob {
 		
 	}
 
+    void reactOnSound(PlayerMovement player)
+    {
+
+
+
+    }
 
 }
