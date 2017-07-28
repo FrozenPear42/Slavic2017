@@ -6,11 +6,6 @@ public class GreenBlobFollower : MonoBehaviour, ISoundReactive{
 
     GameObject toFollow;
 
-    GreenBlobFollower(GameObject toFollow)
-    {
-        this.toFollow = toFollow;
-    }
-
 	// Use this for initialization
 	void Start () {
 		
@@ -18,11 +13,17 @@ public class GreenBlobFollower : MonoBehaviour, ISoundReactive{
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.transform.position = toFollow.transform.position;
+        if(toFollow != null)
+            gameObject.transform.position = toFollow.transform.position;
 	}
 
     public void reactOnSound(PlayerMovement player)
     {
         Destroy(gameObject);
+    }
+
+    public void setFollow(GameObject toFollow)
+    {
+        this.toFollow = toFollow;
     }
 }
