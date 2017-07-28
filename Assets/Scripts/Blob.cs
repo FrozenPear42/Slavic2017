@@ -15,24 +15,58 @@ public class Blob : MonoBehaviour
     private Vector3 randomDirectionVector = Vector3.forward;
     private Vector3 newPosition = Vector3.forward;
 
+    private BlobSpawner blobSpawner;
+
+    private bool isIdle = true;
+    private bool isTargetPosSet = false;
+    private Vector3 targetPos = Vector3.zero;
+
     // Use this for initialization
-    void Start()
+    protected virtual void Start()
     {
         blobRigidBody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        OsmoticMove();
+    public void SetBlobSpawner(BlobSpawner spawner) {
+        blobSpawner = spawner;
     }
 
-    Collider[] getCollidersInRange()
+    // Update is called once per frame
+    protected virtual void Update()
+    {
+        if (isIdle && !isTargetPosSet)
+        {
+            OsmoticMove();
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, targetPos, movementSpeed / 5.0f * Time.deltaTime);
+        }
+    }
+
+    protected virtual void setIdle(bool idle)
+    {
+        if (idle)
+        {
+            isIdle = true;
+            isTargetPosSet = false;
+        }
+    }
+
+    public void moveToPosition(Vector3 position, float speed)
+    {
+        targetPos = position;
+        isIdle = false;
+        isTargetPosSet = true;
+        movementSpeed = speed;
+    }
+
+    public Collider[] getCollidersInRange()
     {
         return Physics.OverlapSphere(transform.position, scanRange);
     }
 
-    void OsmoticMove()
+    public void OsmoticMove()
     {
         if (timeStamp >= cooldownPeriodInSeconds)
         {
