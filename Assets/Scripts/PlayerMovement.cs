@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,13 +16,18 @@ public class PlayerMovement : MonoBehaviour
 
     public float baseForce = 100.0f;
     public float soundDelay = 2.0f;
+    public float soundRadius = 100.0f;
 
     private bool isEmmitingSound = false;
-    public bool IsEmmitingSound { get { return isEmmitingSound; } }
+
+    public bool IsEmmitingSound
+    {
+        get { return isEmmitingSound; }
+    }
 
     private bool hasAnyFollower = false;
     public bool HasAnyFollowers { get; set; }
-   
+
     private bool hasGreenFollower = false;
 
     public bool HasGreenFollower
@@ -56,12 +62,17 @@ public class PlayerMovement : MonoBehaviour
 
         playerBody.AddForce(new Vector3(baseForce * x, 0, baseForce * y));
 
-
-        if (isEmmitingSound && lastSoundEventTime + soundDelay <= Time.fixedTime)
+        if (isEmmitingSound)
         {
-            isEmmitingSound = false;
+            if (lastSoundEventTime + soundDelay <= Time.fixedTime)
+            {
+                isEmmitingSound = false;
+            }
+            else
+            {
+                findSoundReactObjects();
+            }
         }
-
         if (!isEmmitingSound && (Input.GetKey(soundButton) || Input.GetKey(soundKey)))
         {
             playerAudioSource.Play();
@@ -69,4 +80,16 @@ public class PlayerMovement : MonoBehaviour
             isEmmitingSound = true;
         }
     }
+
+    void findSoundReactObjects()
+    {
+        Collider[] objects = Physics.OverlapSphere(this.playerBody.position, soundRadius);
+        foreach (var o in objects)
+        {
+            ISoundReactive react = o.GetComponent<ISoundReactive>();
+            if(react != null)
+                react.reactOnSound(this);
+        }
+    }
+
 }
