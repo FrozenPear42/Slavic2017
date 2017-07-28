@@ -7,14 +7,14 @@ public class GreenBlob : Blob {
     public float range; 
     bool followPlayer = false;
 
-	// Use this for initialization
-	protected void override Start () {
+    // Use this for initialization
+    override protected void Start () {
         player = FindObjectOfType<PlayerMovement>();
-        base.isIdle = true;
+        base.setIdle(true);
     }
 	
 	// Update is called once per frame
-	protected void override Update () {
+	override protected void Update () {
         if ((player.transform.position - transform.position).magnitude < range)
         {
             player.HasGreenFollower = true;
