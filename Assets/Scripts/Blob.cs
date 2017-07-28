@@ -17,20 +17,48 @@ public class Blob : MonoBehaviour
 
     private BlobSpawner blobSpawner;
 
+    private bool isIdle = true;
+    private bool isTargetPosSet = false;
+    private Vector3 targetPos = Vector3.zero;
+
     // Use this for initialization
-    void Start()
+    protected virtual void Start()
     {
         blobRigidBody = GetComponent<Rigidbody>();
     }
 
-    void SetBlobSpawner(BlobSpawner spawner) {
+    public void SetBlobSpawner(BlobSpawner spawner) {
         blobSpawner = spawner;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        OsmoticMove();
+        if (isIdle && !isTargetPosSet)
+        {
+            OsmoticMove();
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, targetPos, movementSpeed / 5.0f * Time.deltaTime);
+        }
+    }
+
+    protected virtual void setIdle(bool idle)
+    {
+        if (idle)
+        {
+            isIdle = true;
+            isTargetPosSet = false;
+        }
+    }
+
+    public void moveToPosition(Vector3 position, float speed)
+    {
+        targetPos = position;
+        isIdle = false;
+        isTargetPosSet = true;
+        movementSpeed = speed;
     }
 
     public Collider[] getCollidersInRange()
