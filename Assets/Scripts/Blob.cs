@@ -15,10 +15,16 @@ public class Blob : MonoBehaviour
     private Vector3 randomDirectionVector = Vector3.forward;
     private Vector3 newPosition = Vector3.forward;
 
+    private BlobSpawner blobSpawner;
+
     // Use this for initialization
     void Start()
     {
         blobRigidBody = GetComponent<Rigidbody>();
+    }
+
+    void SetBlobSpawner(BlobSpawner spawner) {
+        blobSpawner = spawner;
     }
 
     // Update is called once per frame
@@ -27,12 +33,12 @@ public class Blob : MonoBehaviour
         OsmoticMove();
     }
 
-    Collider[] getCollidersInRange()
+    public Collider[] getCollidersInRange()
     {
         return Physics.OverlapSphere(transform.position, scanRange);
     }
 
-    void OsmoticMove()
+    public void OsmoticMove()
     {
         if (timeStamp >= cooldownPeriodInSeconds)
         {
