@@ -19,5 +19,15 @@ public class RedBlob :  Blob, ISoundReactive {
         moveToPosition(player.transform.position, movementSpeed);
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        Destroy(collision.gameObject);
+        Debug.Log("spawn fioletowego");
+        Destroy(this);
+    }
 
+    private void OnDestroy()
+    {
+        Debug.Log("On destroy red blob!");
+    }
 }
