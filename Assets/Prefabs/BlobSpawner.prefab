@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd53739da57f394da2d5412b2479b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blob_prefab: {fileID: 1024823767059464, guid: 414e8a90fc12d904bb48a9fc591edde5,
+  blob_prefab: {fileID: 1589769209561252, guid: 2030e1bd682b7844fb97727452c5427c,
     type: 2}
   max_blobs_number: 10
   check_interval: 10
