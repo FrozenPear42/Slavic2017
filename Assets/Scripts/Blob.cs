@@ -22,12 +22,12 @@ public class Blob : MonoBehaviour
     private Vector3 targetPos = Vector3.zero;
 
     // Use this for initialization
-    void Start()
+    protected virtual void Start()
     {
         blobRigidBody = GetComponent<Rigidbody>();
     }
 
-    void SetBlobSpawner(BlobSpawner spawner) {
+    public void SetBlobSpawner(BlobSpawner spawner) {
         blobSpawner = spawner;
     }
 

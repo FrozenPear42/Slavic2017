@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedBlob :  Blob { 
+public class RedBlob :  Blob, ISoundReactive { 
 
 	// Use this for initialization
 	void Start () {
@@ -14,11 +14,10 @@ public class RedBlob :  Blob {
 		
 	}
 
-    void reactOnSound(PlayerMovement player)
+    public void reactOnSound(PlayerMovement player)
     {
-
-
-
+        moveToPosition(player.transform.position, movementSpeed);
     }
+
 
 }
