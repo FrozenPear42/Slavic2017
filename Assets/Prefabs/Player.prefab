@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4333865493568862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4360343811099974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Feet002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4837880410139796}
   - component: {fileID: 95919235615949458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Avatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 54502216258611118}
   - component: {fileID: 82627543373819760}
   - component: {fileID: 135770783193269668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4610454364374658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Feet001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4795635996592948}
   - component: {fileID: 54969575805600434}
   - component: {fileID: 145930025762267520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4273927067433114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Feet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 4805550417824734}
   - component: {fileID: 33104888040627126}
   - component: {fileID: 23439898285496030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4960312422698720}
   - component: {fileID: 54701606051029044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 4927701578014722}
   - component: {fileID: 33752391001971276}
   - component: {fileID: 23326852247472332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foot004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 4167837496998842}
   - component: {fileID: 33248978526847536}
   - component: {fileID: 23576761563646430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foot002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 4617574038781386}
   - component: {fileID: 33450908608182606}
   - component: {fileID: 23394792258851872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 4094729681042412}
   - component: {fileID: 33429728938923204}
   - component: {fileID: 23920930523001890}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foot003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244961531849914}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.016340137, z: 0}
+  m_LocalPosition: {x: 0, y: 0.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4805550417824734}
@@ -399,7 +399,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1542507014889664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4955367067128208}
@@ -734,7 +734,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1082857952810182}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e702c639895855b42b8315d1117e32bd, type: 3}
+  m_Avatar: {fileID: 9000000, guid: c15eec830174c1345bd6472dc1ebafc4, type: 3}
   m_Controller: {fileID: 9100000, guid: c96e71d1a07c69b499cb76d0b5a7dfd4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
