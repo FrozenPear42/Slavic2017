@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114356358494275204}
   - component: {fileID: 54039609515519742}
   m_Layer: 0
-  m_Name: BlueBlob
+  m_Name: BlueBlobCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
