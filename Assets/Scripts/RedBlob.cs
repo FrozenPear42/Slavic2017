@@ -40,9 +40,4 @@ public class RedBlob : Blob, ISoundReactive
         }
 
     }
-
-    private void OnDestroy()
-    {
-        Debug.Log("On destroy red blob!");
-    }
 }
