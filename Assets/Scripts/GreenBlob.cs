@@ -66,7 +66,18 @@ public class GreenBlob : Blob, ISoundReactive
 
     public void reactOnSound(Player player)
     {
-        state = State.Cooldown;
-        cooldownStart = Time.time;
+        if (state == State.Following)
+        {
+            state = State.Cooldown;
+            cooldownStart = Time.time;
+            player.HasGreenFollower = false;
+        }
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        if (state == State.Following)
+            player.HasGreenFollower = false;
     }
 }

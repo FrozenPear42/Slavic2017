@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23776462535699078}
   - component: {fileID: 54478134641943078}
   m_Layer: 0
-  m_Name: BlackBlob
+  m_Name: BlackBlob2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
