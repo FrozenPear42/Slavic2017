@@ -18,7 +18,7 @@ public class RedBlob :  Blob, ISoundReactive {
     {
         addChargeForce(player.gameObject.transform.position - transform.position, 20*movementSpeed);
         //base.moveToPosition(player.gameObject.transform.position, base.movementSpeed, 2f);
-    }
+    }   
 
     public void OnCollisionEnter(Collision collision)
     {
