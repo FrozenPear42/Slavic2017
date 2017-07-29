@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
 
-        playerBody.AddForce(new Vector3(baseForce * x, 0, baseForce * y));
+        playerBody.AddForce(new Vector3(baseForce * x * Time.deltaTime, 0, baseForce * y * Time.deltaTime));
 
         if (isEmmitingSound)
         {
@@ -68,7 +68,6 @@ public class Player : MonoBehaviour
             {
                 isEmmitingSound = false;
             }
-
         }
         if (!isEmmitingSound && (Input.GetKey(soundButton) || Input.GetKey(soundKey)))
         {
@@ -85,9 +84,8 @@ public class Player : MonoBehaviour
         foreach (var o in objects)
         {
             ISoundReactive react = o.GetComponent<ISoundReactive>();
-            if(react != null)
+            if (react != null)
                 react.reactOnSound(this);
         }
     }
-
 }
