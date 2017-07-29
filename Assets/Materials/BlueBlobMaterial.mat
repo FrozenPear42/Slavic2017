@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GreenBlobMaterial
+  m_Name: BlueBlobMaterial
   m_Shader: {fileID: 4800000, guid: 8085e9a02203a0944abda62e3c32675a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -66,7 +66,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimPower: 2.2
+    - _RimPower: 1.9
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -75,5 +75,5 @@ Material:
     m_Colors:
     - _Color: {r: 0, g: 1, b: 0.08965516, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _InnerColor: {r: 0, g: 1, b: 0.33793116, a: 1}
-    - _RimColor: {r: 0.49837726, g: 0.9264706, b: 0.013624581, a: 0}
+    - _InnerColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 0.15862082, g: 0, b: 1, a: 0}
