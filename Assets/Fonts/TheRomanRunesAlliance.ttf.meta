@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 8d4a4c48c84fd15438e46241afb048f3
+timeCreated: 1501357329
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: TheRomanRunesAlliance
+  fontNames:
+  - TheRomanRunesAlliance
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
