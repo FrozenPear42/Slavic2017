@@ -11,8 +11,10 @@ public class BlackBlob : Blob
     bool isBlueAbsorbed;
 
     // Use this for initialization
-    void Start()
+    override protected void Start()
     {
+        base.Start();
+
         bool isGreenAbsorbed = false;
         bool isRedAbsorbed = false;
         bool isBlueAbsorbed = false;
@@ -20,7 +22,7 @@ public class BlackBlob : Blob
     }
 
     // Update is called once per frame
-    void Update()
+    override protected void Update()
     {
     }
 
