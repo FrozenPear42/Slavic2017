@@ -10,29 +10,18 @@ public class BlueBlob : Blob {
 
     bool are_there_bad_guys = false;
 
-    Vector3 where_to_go = Vector3.zero;
-
     override protected void Start () {
         base.Start();
         base.setIdle(true);
-        scanRange = 5;
 	}
 
 	override protected void Update () {
         base.Update();
         Vector3 avg = GetMeanBadGuysPositon();
-        where_to_go = avg;
         if (are_there_bad_guys) {
-            Debug.Log("HE IS HERE. RUN FOR YOUR LIVES");
-            where_to_go = transform.position + (transform.position - avg).normalized * (scanRange + 1);
-            base.addForce(where_to_go, run_speed, base.baseForce);
+            Vector3 diff = transform.position - avg;
+            base.addForce(diff, run_speed/diff.magnitude, base.baseForce);
         }
-
-        Debug.Log((transform.position - where_to_go).magnitude);
-        if ((transform.position - where_to_go).magnitude < eps) {
-            Debug.Log("IM HERE, RESTING");
-            base.setIdle(true);
-        }  
 	}
 
     Vector3 GetMeanBadGuysPositon() {
