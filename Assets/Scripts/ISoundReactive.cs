@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ISoundReactive
 {
-    void reactOnSound(PlayerMovement player);
+    void reactOnSound(Player player);
 }

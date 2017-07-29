@@ -25,7 +25,7 @@ public class Rock : MonoBehaviour, ISoundReactive
     {
     }
 
-    public void reactOnSound(PlayerMovement player)
+    public void reactOnSound(Player player)
     {
         if (lastHitTime + resetTime <= Time.time)
         {

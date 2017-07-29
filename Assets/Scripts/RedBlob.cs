@@ -14,7 +14,7 @@ public class RedBlob :  Blob, ISoundReactive {
 		
 	}
 
-    public void reactOnSound(PlayerMovement player)
+    public void reactOnSound(Player player)
     {
         moveToPosition(player.transform.position, movementSpeed);
     }
