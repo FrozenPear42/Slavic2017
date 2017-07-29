@@ -47,7 +47,8 @@ public class Slot : MonoBehaviour {
 
     void SetPullingBlob(GameObject blob) {
         blob.GetComponent<Blob>().enabled = false;
-  
+        blob.GetComponent<Collider>().enabled = false;
+
         pulling_blob = blob;
         pulling_start_position = pulling_blob.transform.position;
         pulling_start_time = Time.time;
@@ -61,7 +62,7 @@ public class Slot : MonoBehaviour {
     void EndPullingBlob() {
         isPulling = false;
         Destroy(pulling_blob);
-        Instantiate(replace_object, transform.position, Quaternion.identity, transform);
+        Instantiate(replace_object, transform.position + pulling_end_diff_vector, Quaternion.identity, transform);
 
         isCompleted = true;
         transform.parent.GetComponent<Obelisk>().ReportSuccess(this);

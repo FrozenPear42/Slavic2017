@@ -17,7 +17,7 @@ public class Obelisk : MonoBehaviour {
         successes++;
         if(successes == 5)
         {
-            //Debug.Log("You Won");
+            GetComponent<Animator>().SetTrigger("Open");
         }
     }
 }
