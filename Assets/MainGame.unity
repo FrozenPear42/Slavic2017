@@ -160,7 +160,7 @@ Prefab:
     - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
         type: 2}
       propertyPath: max_blobs_number
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
         type: 2}
@@ -17966,6 +17966,11 @@ Prefab:
       value: 
       objectReference: {fileID: 114639171155379868, guid: 059abd93939e3204fb1e134b63bbc7c7,
         type: 2}
+    - target: {fileID: 114071105649363822, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
+        type: 2}
+      propertyPath: pulling_end_diff_vector.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f74984b9e3b18c41bed477f42e8a4e4, type: 2}
   m_IsPrefabParent: 0
