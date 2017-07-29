@@ -21,6 +21,7 @@ ExportedObj/
 *.unityproj
 *.booproj
 #*.meta
+!*.*.meta
 
 # ============ #
 # OS generated #
@@ -33,6 +34,4 @@ ExportedObj/
 Icon?
 ehthumbs.db
 Thumbs.db
-Assets/RafalTest.unity
-Assets/Main.unity
 .vs
