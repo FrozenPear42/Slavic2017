@@ -201,8 +201,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523455402914388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0649524, y: -0.775, z: -2.0478263}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.707, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4377381786773392}
   - {fileID: 4013559650076806}
@@ -298,7 +298,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1127172134406460}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25950503, y: 0.775, z: -6.27}
+  m_LocalPosition: {x: 3.97, y: 0.27492857, z: 4.5071063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4156641506478968}
@@ -395,7 +395,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3c29f00f94fb3c34c9236b232e0a42c7, type: 2}
+  - {fileID: 2100000, guid: 8be57689110b1a141949d92d9f9b443e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundKey: f
   soundButton: joystick button 2
-  baseForce: 200
+  baseForce: 10000
   soundDelay: 2
   soundRadius: 100
 --- !u!135 &135770783193269668
