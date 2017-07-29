@@ -30,7 +30,7 @@ public class BlobSpawner : MonoBehaviour {
     }
 
     void SpawnBlob() {
-        Vector3 spawn_vector = Random.insideUnitSphere * spawn_radius;
+        Vector3 spawn_vector = Random.insideUnitCircle * spawn_radius;
         spawn_vector.y = 0;
         GameObject blob = Instantiate(blob_prefab, transform.position + spawn_vector, Quaternion.identity, transform);
         list_of_blobs.Add(blob);
@@ -42,5 +42,9 @@ public class BlobSpawner : MonoBehaviour {
 
     int GetNumberOfLivingBlobs() {
         return list_of_blobs.Count;
+    }
+
+    private void OnDrawGizmos() {
+        Gizmos.DrawWireSphere(transform.position, spawn_radius);
     }
 }
