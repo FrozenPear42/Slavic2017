@@ -5,17 +5,18 @@ using UnityEngine;
 public class RedBlob :  Blob, ISoundReactive { 
 
 	// Use this for initialization
-	void Start () {
-		
+	override protected void Start () {
+        base.Start();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	override protected void Update () {
+        base.Update();
 	}
 
-    public void reactOnSound(PlayerMovement player)
+    public void reactOnSound(Player player)
     {
+        Debug.Log("SOUND");
         moveToPosition(player.transform.position, movementSpeed);
     }
 

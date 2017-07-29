@@ -19,7 +19,7 @@ public class Blob : MonoBehaviour
 
     private bool isIdle = true;
     private bool isTargetPosSet = false;
-    private Vector3 targetPos = Vector3.zero;
+    private Vector3 targetPos;
 
     // Use this for initialization
     protected virtual void Start()
@@ -40,7 +40,8 @@ public class Blob : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.Lerp(transform.position, targetPos, movementSpeed / 5.0f * Time.deltaTime);
+            transform.position = Vector3.LerpUnclamped(transform.position, targetPos, movementSpeed / 5.0f * Time.deltaTime);
+            Debug.Log("my pos: " + transform.position + " target pos: " + targetPos)
         }
     }
 
@@ -55,7 +56,7 @@ public class Blob : MonoBehaviour
 
     public void moveToPosition(Vector3 position, float speed)
     {
-        targetPos = position;
+        targetPos = new Vector3(position.x, position.y, position.z);
         isIdle = false;
         isTargetPosSet = true;
         movementSpeed = speed;
