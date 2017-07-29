@@ -102,6 +102,10 @@ public class Blob : MonoBehaviour
             isMoving = false;
     }
 
+    void setIdleTrue() {
+        setIdle(true);
+    }
+
     public void addForce(Vector3 position, float speed, float baseForce = 100f)
     {
         //Debug.Log("Add force: targetPosition: " + position + " this position: " + transform.position);
@@ -113,10 +117,11 @@ public class Blob : MonoBehaviour
     public void addChargeForce(Vector3 position, float speed, float force = 100f)
     {
         isIdle = false;
-        Debug.Log("Add force: targetPosition: " + position + " this position: " + transform.position);
+        //Debug.Log("Add force: targetPosition: " + position + " this position: " + transform.position);
 
         position = Vector3.Normalize(new Vector3(position.x, 0f, position.z));
         blobRigidBody.AddForce(new Vector3(force * position.x, 0, force * position.z) * speed * Time.deltaTime);
+        Invoke("setIdleTrue", 2f);
     }
 
     public void moveToPosition(Vector3 position, float speed, float intervals)

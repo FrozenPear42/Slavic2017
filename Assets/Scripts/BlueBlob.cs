@@ -15,12 +15,18 @@ public class BlueBlob : Blob {
         base.setIdle(true);
 	}
 
+    public bool isGoingToBeIdle = false;
+
 	override protected void Update () {
         base.Update();
         Vector3 avg = GetMeanBadGuysPositon();
         if (are_there_bad_guys) {
+            isGoingToBeIdle = false;
             Vector3 diff = transform.position - avg;
             base.addForce(diff, run_speed/diff.magnitude, base.baseForce);
+        } else if (!isGoingToBeIdle){
+            isGoingToBeIdle = true;
+            Invoke("MakeIdle", 3f);
         }
 	}
 
@@ -51,5 +57,10 @@ public class BlueBlob : Blob {
 
         average = (average + player_wage * player_position) / (player_wage+1);
         return average;
+    }
+
+    void MakeIdle() {
+        //Debug.Log("IDLE NOW");
+        setIdle(true);
     }
 }
