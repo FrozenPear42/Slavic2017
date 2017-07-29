@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GreenBlob : Blob {
-    PlayerMovement player;
+    Player player;
 
     public GameObject greenBlobFollower;
     public float range; 
@@ -11,16 +11,17 @@ public class GreenBlob : Blob {
 
     // Use this for initialization
     override protected void Start () {
-        player = FindObjectOfType<PlayerMovement>();
+        player = FindObjectOfType<Player>();
         base.setIdle(true);
     }
 	
 	// Update is called once per frame
 	override protected void Update () {
+        base.Update();
         if ((player.transform.position - transform.position).magnitude < range)
         {
             player.HasGreenFollower = true;
-            GameObject follower = GameObject.Instantiate<GameObject>(greenBlobFollower, player.transform.position, Quaternion.identity);
+            GameObject follower = GameObject.Instantiate<GameObject>(greenBlobFollower, player.transform.position+new Vector3(1,0,1), Quaternion.identity);
             follower.GetComponent<GreenBlobFollower>().setFollow(player.gameObject);
             Destroy(gameObject);
         }

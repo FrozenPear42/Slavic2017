@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SrakaBlob : Blob {
+public class BlackBlob : Blob {
 
 	// Use this for initialization
 	void Start () {

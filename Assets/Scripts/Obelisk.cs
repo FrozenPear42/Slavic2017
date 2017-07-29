@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Obelisk : MonoBehaviour {
+    int successes = 0;
 
-	void Start () {
+    void Start () {
 		
 	}
 
@@ -12,7 +13,11 @@ public class Obelisk : MonoBehaviour {
 		
 	}
 
-    public void ReportSuccess() {
-        
+    public void ReportSuccess(Slot slot) {
+        successes++;
+        if(successes == 5)
+        {
+            Debug.Log("You Won");
+        }
     }
 }

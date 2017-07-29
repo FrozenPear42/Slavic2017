@@ -19,7 +19,7 @@ public class GreenBlobFollower : Blob, ISoundReactive{
         }
     }
 
-    public void reactOnSound(PlayerMovement player)
+    public void reactOnSound(Player player)
     {
         Destroy(gameObject);
     }

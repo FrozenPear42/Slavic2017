@@ -14,7 +14,7 @@ public class Rock : MonoBehaviour, ISoundReactive
     public float resetTime = 5.0f;
 
     public GameObject blackBlobPrefab;
-
+    public GameObject brokenRockPrefab;
 
     void Start()
     {
@@ -25,15 +25,15 @@ public class Rock : MonoBehaviour, ISoundReactive
     {
     }
 
-    public void reactOnSound(PlayerMovement player)
+    public void reactOnSound(Player player)
     {
         if (lastHitTime + resetTime <= Time.time)
         {
-            lastHitTime = Time.time;
             hitCount = 0;
         }
 
         hitCount += 1;
+        lastHitTime = Time.time;
 
         if (hitCount >= targetHitCount)
         {
@@ -43,6 +43,11 @@ public class Rock : MonoBehaviour, ISoundReactive
 
     private void spawnBlackBlob()
     {
-        Instantiate(blackBlobPrefab, transform);
+        var black = Instantiate(blackBlobPrefab);
+        black.transform.position = transform.position + new Vector3(1f, 0, 0);
+        var broken = Instantiate(brokenRockPrefab);
+        broken.transform.position = transform.position;
+        Destroy(gameObject);
     }
+
 }
