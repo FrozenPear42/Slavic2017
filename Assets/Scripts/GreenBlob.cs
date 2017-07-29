@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GreenBlob : Blob {
     PlayerMovement player;
+
+    public GameObject greenBlobFollower;
     public float range; 
     bool followPlayer = false;
 
@@ -18,7 +20,8 @@ public class GreenBlob : Blob {
         if ((player.transform.position - transform.position).magnitude < range)
         {
             player.HasGreenFollower = true;
-            //Spawn folower for player
+            GameObject.Instantiate<GameObject>(greenBlobFollower);
+            greenBlobFollower.GetComponent<GreenBlobFollower>().setFollow(player.gameObject);
             Destroy(gameObject);
         }
 	}
