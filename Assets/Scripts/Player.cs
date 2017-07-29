@@ -132,10 +132,4 @@ public class Player : MonoBehaviour
                 react.reactOnSound(this);
         }
     }
-
-    public void respawn()
-    {
-        transform.position = basePosition;
-    }
-
 }
