@@ -539,7 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replace_object: {fileID: 1585575699610096, guid: 8770f911da8530f488cc20cdbc45fa82,
     type: 2}
-  wanted_component: {fileID: 114155795867249686, guid: 4cb727ad9ae14f54c8d8152cc54b382f,
+  wanted_component: {fileID: 114371912329018398, guid: c45c46456a034a342b22f04a2d0fbe9d,
     type: 2}
   pulling_end_diff_vector: {x: 0, y: 0, z: 0}
   pulling_duration: 3
@@ -795,6 +795,18 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 1.43
       objectReference: {fileID: 0}
+    - target: {fileID: 114004680717908080, guid: 9b2ee8bbdf7b1a24b8e2f3ece69a8a39,
+        type: 2}
+      propertyPath: wanted_component
+      value: 
+      objectReference: {fileID: 114654844200119148, guid: 27dbd08ad5a0d9c4ab792840d843ecaf,
+        type: 2}
+    - target: {fileID: 114004680717908080, guid: 9b2ee8bbdf7b1a24b8e2f3ece69a8a39,
+        type: 2}
+      propertyPath: replace_object
+      value: 
+      objectReference: {fileID: 1622107106912532, guid: c45c46456a034a342b22f04a2d0fbe9d,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9b2ee8bbdf7b1a24b8e2f3ece69a8a39, type: 2}
   m_IsPrefabParent: 0
@@ -845,7 +857,7 @@ Prefab:
         type: 2}
       propertyPath: blob_prefab
       value: 
-      objectReference: {fileID: 1069971025549542, guid: 27dbd08ad5a0d9c4ab792840d843ecaf,
+      objectReference: {fileID: 1556716509711852, guid: 27dbd08ad5a0d9c4ab792840d843ecaf,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}

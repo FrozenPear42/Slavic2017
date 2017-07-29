@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GreenBlobFollower : MonoBehaviour, ISoundReactive{
+public class GreenBlobFollower : Blob, ISoundReactive{
 
     GameObject toFollow = null;
 
-	// Use this for initialization
-	void Start () {
-		
+    // Use this for initialization
+    override protected void Start () {
+        base.setIdle(false);
 	}
 
     // Update is called once per frame
-    void Update()
+    override protected void Update()
     {
         if (toFollow != null) { 
             gameObject.transform.position = toFollow.transform.position + new Vector3(1, 0, 1);
