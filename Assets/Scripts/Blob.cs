@@ -27,6 +27,7 @@ public class Blob : MonoBehaviour
     private float movingTimeStamp = 0f;
     private bool isMoving = false;
     private Vector3 targetPosition;
+    private Vector3 targetPosition2;
     private float interval = 1f;
 
     // Use this for initialization
@@ -53,12 +54,12 @@ public class Blob : MonoBehaviour
             if (movingTimeStamp >= interval)
             {
                 Debug.Log("blob");
-                moveToPosition(targetPosition, movementSpeed, interval);
+                move(targetPosition, movementSpeed, interval);
                 movingTimeStamp = 0f;
             }
-        }
 
-        movingTimeStamp += Time.deltaTime;
+            movingTimeStamp += Time.deltaTime;
+        }
     }
 
     public bool IsMoving()
@@ -71,29 +72,37 @@ public class Blob : MonoBehaviour
         isIdle = idle;
     }
 
-    public void addForce(Vector3 position, float speed, float baseForce = 100f)
+    public void addForce(Vector3 position, float speed, float baseForce)
     {
+        Debug.Log("Add force: targetPosition: " + position + " this position: " + transform.position);
         isIdle = false;
         movementSpeed = speed;
-        position = Vector3.Normalize(position);
+        position = Vector3.Normalize(new Vector3(position.x, 0f, position.z));
         blobRigidBody.AddForce(new Vector3(baseForce * position.x, 0, baseForce * position.z) * movementSpeed * Time.deltaTime);
     }
 
     public void moveToPosition(Vector3 position, float speed, float intervals)
     {
         isMoving = true;
+        isIdle = false; 
         interval = intervals;
-        targetPosition = position;
+        targetPosition = position - transform.position;
+        targetPosition2 = position;
+    }
 
-        if (Vector3.Distance(transform.position, targetPosition) <= epsilon)
+    private void move(Vector3 position, float speed, float interval)
+    {
+        if (Vector3.Distance(transform.position, targetPosition2) <= epsilon)
         {
             Debug.Log("stopped");
             blobRigidBody.velocity = Vector3.zero;
             isMoving = false;
+            return;
         }
 
         addForce(position, speed, baseForce);
     }
+
 
     public Collider[] getCollidersInRange()
     {
