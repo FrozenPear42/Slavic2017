@@ -25,11 +25,10 @@ public class RedBlob : Blob, ISoundReactive
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Blob>() != null)
+        if (collision.gameObject != null && collision.gameObject.GetComponent<Blob>() != null && collision.gameObject.GetComponent<PurpleBlob>() == null)
         {
             Destroy(collision.gameObject);
-            GameObject blob = Instantiate(blobPrefab, transform.position, Quaternion.identity, transform);
-            blob.GetComponent<PurpleBlob>().ForceStart();
+            GameObject blob = Instantiate(blobPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         else

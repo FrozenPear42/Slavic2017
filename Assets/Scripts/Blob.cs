@@ -14,7 +14,7 @@ public class Blob : MonoBehaviour
 
     private Rigidbody blobRigidBody;
 
-    private BlobSpawner blobSpawner;
+    protected BlobSpawner blobSpawner;
 
     private bool isIdle = true;
 

@@ -7,7 +7,7 @@ public class BlobSpawner : MonoBehaviour {
     public int max_blobs_number;
     public float check_interval;
 
-    List<GameObject> list_of_blobs;
+    public List<GameObject> list_of_blobs;
 
 	void Start () {
         InvokeRepeating("RestoreBlobs", 1.0f, check_interval);
