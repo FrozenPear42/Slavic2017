@@ -7667,10 +7667,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114479299005751116, guid: 85f9df98046d4634784ae79751ca6dd9,
         type: 2}
-      propertyPath: ringPrefab
-      value: 
-      objectReference: {fileID: 1683917101997700, guid: ffd13ce15c728a74ba9fa1466c6ab2ae,
-        type: 2}
+      propertyPath: soundRadius
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85f9df98046d4634784ae79751ca6dd9, type: 2}
   m_IsPrefabParent: 0

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
+using System.Xml.Serialization;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -25,6 +26,8 @@ public class Player : MonoBehaviour
     private Animator animator;
 
     private bool isEmmitingSound = false;
+
+    private Vector3 basePosition;
 
     public bool IsEmmitingSound
     {
@@ -79,6 +82,8 @@ public class Player : MonoBehaviour
         hasGreenFollower = false;
         playerAudioSource = GetComponent<AudioSource>();
         animator = GetComponentInChildren<Animator>();
+
+        basePosition = transform.position;
     }
 
     // Update is called once per frame
@@ -127,4 +132,10 @@ public class Player : MonoBehaviour
                 react.reactOnSound(this);
         }
     }
+
+    public void respawn()
+    {
+        transform.position = basePosition;
+    }
+
 }

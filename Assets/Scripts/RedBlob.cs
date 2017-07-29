@@ -35,8 +35,8 @@ public class RedBlob : Blob, ISoundReactive
         else
         if (collision.gameObject.GetComponent<Player>() != null)
         {
-            // todo: move to starting position
-
+            var player = collision.gameObject.GetComponent<Player>();
+            player.respawn();
             Destroy(gameObject);
         }
 

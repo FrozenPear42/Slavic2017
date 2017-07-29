@@ -752,8 +752,9 @@ MonoBehaviour:
   soundButton: joystick button 2
   baseForce: 7000
   soundDelay: 2
-  soundRadius: 100
+  soundRadius: 11
   maxSpeed: 15
+  ringPrefab: {fileID: 1683917101997700, guid: ffd13ce15c728a74ba9fa1466c6ab2ae, type: 2}
 --- !u!122 &122089195668135258
 Halo:
   m_ObjectHideFlags: 1
