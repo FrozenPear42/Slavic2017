@@ -6,6 +6,7 @@ public class BlobSpawner : MonoBehaviour {
     public GameObject blob_prefab;
     public int max_blobs_number;
     public float check_interval;
+    public float spawn_radius;
 
     public List<GameObject> list_of_blobs;
 
@@ -30,7 +31,7 @@ public class BlobSpawner : MonoBehaviour {
 
     void SpawnBlob() {
         Debug.Log("Spawn blob");
-        GameObject blob = Instantiate(blob_prefab, transform.position, Quaternion.identity, transform);
+        GameObject blob = Instantiate(blob_prefab, transform.position + Random.insideUnitSphere*spawn_radius, Quaternion.identity, transform);
         list_of_blobs.Add(blob);
     }
 
