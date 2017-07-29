@@ -11,11 +11,6 @@ public class WhiteBlob : Blob
     override protected void Start()
     {
         base.Start();
-        moveToPosition(targetSlot.transform.position, movementSpeed, 100f);
-	}
-
-    // Update is called once per frame
-    override protected void Update () {
-		
+        moveToPosition(targetSlot.transform.position, movementSpeed, 1f);
 	}
 }
