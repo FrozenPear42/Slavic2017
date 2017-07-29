@@ -133,14 +133,21 @@ public class Blob : MonoBehaviour
             {
                 Vector3 moveBackVector = (originPosition - transform.position);
                 //Debug.Log("move back: origin: " + originPosition + " pos: " + transform.position);
-                blobRigidBody.AddForce(new Vector3(moveBackVector.x*baseForce, 0, moveBackVector.z * baseForce) * moveBackForce * Time.deltaTime);
-          
+                //blobRigidBody.AddForce(new Vector3(moveBackVector.x*baseForce, 0, moveBackVector.z * baseForce) * moveBackForce * Time.deltaTime);
+                moveToPosition(originPosition, movementSpeed, 1f);
             }
 
             timeStamp = 0f;
             //Debug.Log("Change rotation");
         }
         timeStamp = timeStamp + Time.deltaTime;
+    }
+
+    protected virtual void OnDestroy()
+    {
+        BlobSpawner spawner = GetComponentInParent<BlobSpawner>();
+        if(spawner != null)
+            spawner.BlobDied(gameObject);
     }
 
 }

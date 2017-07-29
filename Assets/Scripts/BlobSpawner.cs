@@ -36,7 +36,7 @@ public class BlobSpawner : MonoBehaviour {
         list_of_blobs.Add(blob);
     }
 
-    void BlobDied(GameObject blob) {
+    public void BlobDied(GameObject blob) {
         list_of_blobs.Remove(blob);
     }
 
