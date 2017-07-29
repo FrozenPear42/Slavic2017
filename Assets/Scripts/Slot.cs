@@ -66,6 +66,7 @@ public class Slot : MonoBehaviour {
 
     bool IsThisWantedBlob(GameObject blob) {
         Blob comp = blob.GetComponent<Blob>();
+        if (comp == null) return false;
         return wanted_component.GetType().Equals(comp.GetType());
     }
 }
