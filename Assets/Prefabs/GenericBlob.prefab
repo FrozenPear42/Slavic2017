@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 54680266111937242}
   - component: {fileID: 145356503688753740}
   - component: {fileID: 135805120763838724}
+  - component: {fileID: 145117940937093514}
   m_Layer: 8
   m_Name: SubContoroller
   m_TagString: Untagged
@@ -72,6 +73,7 @@ GameObject:
   - component: {fileID: 54675767381686832}
   - component: {fileID: 145439256249306958}
   - component: {fileID: 135272478727183154}
+  - component: {fileID: 145986324714276878}
   m_Layer: 8
   m_Name: SubContoroller
   m_TagString: Untagged
@@ -141,6 +143,7 @@ GameObject:
   - component: {fileID: 54931655268580200}
   - component: {fileID: 145973327434625472}
   - component: {fileID: 135154936734879388}
+  - component: {fileID: 145405756763517784}
   m_Layer: 8
   m_Name: SubContoroller
   m_TagString: Untagged
@@ -474,6 +477,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.003165692, y: 0.10728449, z: 0.23475748}
     m_Extent: {x: 0.60376, y: 0.4445001, z: 0.550359}
   m_DirtyAABB: 0
+--- !u!145 &145117940937093514
+SpringJoint:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1118482073023900}
+  m_ConnectedBody: {fileID: 54675767381686832}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 0
+  m_ConnectedAnchor: {x: 0.15431763, y: 0.0029365858, z: 0.26728612}
+  serializedVersion: 2
+  m_Spring: 60
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 0
+  m_Tolerance: 0.025
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!145 &145323729264346612
 SpringJoint:
   m_ObjectHideFlags: 1
@@ -518,6 +543,28 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!145 &145405756763517784
+SpringJoint:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888470897687830}
+  m_ConnectedBody: {fileID: 54680266111937242}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 0
+  m_ConnectedAnchor: {x: 0.15431763, y: 0.0029365858, z: 0.26728612}
+  serializedVersion: 2
+  m_Spring: 60
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 0
+  m_Tolerance: 0.025
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!145 &145439256249306958
 SpringJoint:
   m_ObjectHideFlags: 1
@@ -552,6 +599,28 @@ SpringJoint:
   m_ConnectedAnchor: {x: 0.1543176, y: -0.30202004, z: 0.08909537}
   serializedVersion: 2
   m_Spring: 120
+  m_Damper: 0.2
+  m_MinDistance: 0
+  m_MaxDistance: 0
+  m_Tolerance: 0.025
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!145 &145986324714276878
+SpringJoint:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131651321395148}
+  m_ConnectedBody: {fileID: 54931655268580200}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 0
+  m_ConnectedAnchor: {x: 0.15431763, y: 0.0029365858, z: 0.26728612}
+  serializedVersion: 2
+  m_Spring: 60
   m_Damper: 0.2
   m_MinDistance: 0
   m_MaxDistance: 0
