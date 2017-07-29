@@ -21,6 +21,11 @@ public class Blob : MonoBehaviour
     private bool isTargetPosSet = false;
     private Vector3 targetPos;
 
+    private void Awake()
+    {
+        targetPos = transform.position;
+    }
+
     // Use this for initialization
     protected virtual void Start()
     {
