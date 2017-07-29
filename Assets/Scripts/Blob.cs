@@ -82,7 +82,7 @@ public class Blob : MonoBehaviour
         {
             if (movingTimeStamp >= interval)
             {
-                move(targetPosition, movementSpeed, interval);
+                move(targetPosition2-transform.position, movementSpeed, interval);
                 movingTimeStamp = 0f;
             }
 
