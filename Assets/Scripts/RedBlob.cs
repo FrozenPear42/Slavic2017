@@ -14,7 +14,7 @@ public class RedBlob :  Blob, ISoundReactive {
         base.Update();
 	}
 
-    public void reactOnSound(PlayerMovement player)
+    public void reactOnSound(Player player)
     {
         Debug.Log("SOUND");
         moveToPosition(player.transform.position, movementSpeed);
