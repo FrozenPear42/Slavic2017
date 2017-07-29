@@ -8,7 +8,7 @@ public class BlueBlob : Blob {
     public float run_speed;
     public float eps = 1f;
 
-    bool are_there_bad_guys;
+    bool are_there_bad_guys = false;
 
     Vector3 where_to_go = Vector3.zero;
     GameObject light;
@@ -47,7 +47,7 @@ public class BlueBlob : Blob {
         are_there_bad_guys = false;
         int num = 0;
         foreach (Collider col in colliders) {
-            if (col.GetComponent<PlayerMovement>() != null) {
+            if (col.GetComponent<Player>() != null) {
                 player_position = col.transform.position;
                 are_there_bad_guys = true;
             }
@@ -61,6 +61,9 @@ public class BlueBlob : Blob {
 
         if (num > 0)
             average = average / num;
+        else
+            average = player_position;
+
         average = (average + player_wage * player_position) / (player_wage+1);
         return average;
     }
