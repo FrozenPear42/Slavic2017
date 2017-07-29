@@ -318,7 +318,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1620256748465340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3222868, y: -96.72238, z: -93.00431}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4175077296584244}
@@ -966,7 +966,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replace_object: {fileID: 1585575699610096, guid: 8770f911da8530f488cc20cdbc45fa82,
     type: 2}
-  wanted_component: {fileID: 0}
+  wanted_component: {fileID: 114904446087256038, guid: bf4d0be9617cf4446a7e0265b2b47435,
+    type: 2}
   pulling_end_diff_vector: {x: 0, y: 0, z: 0}
   pulling_duration: 3
 --- !u!114 &114313548231735806
@@ -982,7 +983,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replace_object: {fileID: 1585575699610096, guid: 8770f911da8530f488cc20cdbc45fa82,
     type: 2}
-  wanted_component: {fileID: 0}
+  wanted_component: {fileID: 114774098233325338, guid: f112c7938f0c11646936b109ae46fc82,
+    type: 2}
   pulling_end_diff_vector: {x: 0, y: 0, z: 0}
   pulling_duration: 3
 --- !u!114 &114544830868758202
@@ -998,7 +1000,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replace_object: {fileID: 1585575699610096, guid: 8770f911da8530f488cc20cdbc45fa82,
     type: 2}
-  wanted_component: {fileID: 0}
+  wanted_component: {fileID: 114710423157121752, guid: 4b7f1f3fc2bf35c428b52be85e3fbe01,
+    type: 2}
   pulling_end_diff_vector: {x: 0, y: 0, z: 0}
   pulling_duration: 3
 --- !u!114 &114756001953310272
@@ -1014,7 +1017,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replace_object: {fileID: 1585575699610096, guid: 8770f911da8530f488cc20cdbc45fa82,
     type: 2}
-  wanted_component: {fileID: 0}
+  wanted_component: {fileID: 114639171155379868, guid: 059abd93939e3204fb1e134b63bbc7c7,
+    type: 2}
   pulling_end_diff_vector: {x: 0, y: 0, z: 0}
   pulling_duration: 3
 --- !u!114 &114841439566694040
@@ -1030,7 +1034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replace_object: {fileID: 1585575699610096, guid: 8770f911da8530f488cc20cdbc45fa82,
     type: 2}
-  wanted_component: {fileID: 0}
+  wanted_component: {fileID: 114023806380068868, guid: 1989df28afea1ed4283ee3a8c8789ae9,
+    type: 2}
   pulling_end_diff_vector: {x: 0, y: 0, z: 0}
   pulling_duration: 3
 --- !u!135 &135025161651535902
