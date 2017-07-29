@@ -5,7 +5,7 @@ using UnityEngine;
 public class WhiteBlob : Blob
 {
 
-    public Slot targetSlot;
+    public GameObject targetSlot;
 
 	// Use this for initialization
 	void Start () {

@@ -386,7 +386,7 @@ MonoBehaviour:
   cooldownPeriodInSeconds: 4
   baseForce: 100
   player_wage: 5
-  run_speed: 10
+  run_speed: 40
   eps: 1
 --- !u!135 &135174673921784006
 SphereCollider:

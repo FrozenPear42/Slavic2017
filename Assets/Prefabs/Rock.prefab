@@ -112,7 +112,7 @@ MonoBehaviour:
   targetHitCount: 3
   resetTime: 5
   setKinematicAfterTime: 3
-  blackBlobPrefab: {fileID: 1342498779431466, guid: 5b81cea86b70a62418a75d384dcbe06e,
+  blackBlobPrefab: {fileID: 1337164769977532, guid: df026d0be654aea4480ed97458b8c168,
     type: 2}
   brokenRockPrefab: {fileID: 1331966031269230, guid: f816f3cb335d09047a2185b8fd99d2c7,
     type: 2}

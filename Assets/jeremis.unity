@@ -806,7 +806,7 @@ Prefab:
         type: 2}
       propertyPath: blob_prefab
       value: 
-      objectReference: {fileID: 1639623083474858, guid: 25c561b86dc71254a89fcad97c3cafaa,
+      objectReference: {fileID: 1898799311729644, guid: bf4d0be9617cf4446a7e0265b2b47435,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
