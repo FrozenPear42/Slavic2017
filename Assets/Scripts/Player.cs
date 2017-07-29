@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     public float soundDelay = 2.0f;
     public float soundRadius = 100.0f;
 
+    public float maxSpeed = 10.0f;
+
     private Animator animator;
 
     private bool isEmmitingSound = false;
@@ -106,6 +108,9 @@ public class Player : MonoBehaviour
 
         hasGreenFollower = (greenFollowersCount > 0);
         hasAnyFollower = (anyFollowersCount > 0);
+
+        if (playerBody.velocity.magnitude > maxSpeed)
+            playerBody.velocity = maxSpeed * playerBody.velocity.normalized;
     }
 
     void findSoundReactObjects()

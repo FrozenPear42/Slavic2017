@@ -1,6 +1,10 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Hidden/Internal-Halo" {
+Shader "Custom/Halo" {
+	Properties
+	{
+		_Color("Color", Color) = (1.0, 1.0, 1.0, 1.0)
+	}
     SubShader {
         Tags {"RenderType"="Overlay"}
         ZWrite off Cull off // NOTE: 'Cull off' is important as the halo meshes flip handedness each time... BUG: #1220

@@ -10,6 +10,15 @@ public class Blob : MonoBehaviour
     public float cooldownPeriodInSeconds = 4f;
     public float baseForce = 100.0f;
 
+    public Color mainColor;
+    public Color rimColor;
+    public float rimPower = 2.2f;
+
+    private Material mainMaterial;
+    private ParticleSystem auraParticleSystem;
+    private ParticleSystem coreParticleSystem;
+    private Light light;
+
     private float timeStamp = 0f;
 
     private Rigidbody blobRigidBody;
@@ -35,6 +44,26 @@ public class Blob : MonoBehaviour
     {
         originPosition = new Vector3(transform.position.x, 0f, transform.position.z);
         blobRigidBody = GetComponent<Rigidbody>();
+        mainMaterial = GetComponentInChildren<Renderer>().material;
+        auraParticleSystem = GetComponentsInChildren<ParticleSystem>()[0];
+        coreParticleSystem = GetComponentsInChildren<ParticleSystem>()[1];
+        light = GetComponentInChildren<Light>();
+
+    
+        mainMaterial.SetColor("_InnerColor", Color.black);
+        mainMaterial.SetColor("_RimColor", rimColor);
+        mainMaterial.SetFloat("_RimPower", rimPower);
+
+
+        var color = new Color(mainColor.r, mainColor.g, mainColor.b, 1.0f);
+        var auraMain = auraParticleSystem.main;
+        auraMain.startColor = new ParticleSystem.MinMaxGradient(color);
+
+        var coreMain = coreParticleSystem.main;
+        coreMain.startColor = new ParticleSystem.MinMaxGradient(color);
+        
+
+        light.color = mainColor;
     }
 
     public void SetBlobSpawner(BlobSpawner spawner) {
@@ -53,7 +82,6 @@ public class Blob : MonoBehaviour
         {
             if (movingTimeStamp >= interval)
             {
-                //Debug.Log("blob");
                 move(targetPosition, movementSpeed, interval);
                 movingTimeStamp = 0f;
             }
@@ -100,7 +128,7 @@ public class Blob : MonoBehaviour
         targetPosition = position - transform.position;
         targetPosition2 = position;
         targetPosition.y = transform.position.y;
-        targetPosition2.y = 0;
+        targetPosition2.y = transform.position.y;
     }
 
     private void move(Vector3 position, float speed, float interval)
