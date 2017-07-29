@@ -27,6 +27,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
 --- !u!1 &1314028204640124
 GameObject:
   m_ObjectHideFlags: 1
@@ -45,6 +46,9 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1348711951745956
+=======
+--- !u!1 &1108991540295200
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -148,6 +152,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
 --- !u!1 &1733007534958822
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +191,9 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &1788104195794594
+=======
+--- !u!1 &1888470897687830
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -223,13 +231,18 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1733007534958822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
   m_LocalPosition: {x: -1.229, y: 0.749, z: -6.542}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4549217875524344}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
 --- !u!4 &4549217875524344
 Transform:
   m_ObjectHideFlags: 1
@@ -250,6 +263,9 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4582021000223516
+=======
+--- !u!4 &4646765448937016
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -262,6 +278,7 @@ Transform:
   m_Father: {fileID: 4549217875524344}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
 --- !u!4 &4630245243451660
 Transform:
   m_ObjectHideFlags: 1
@@ -276,6 +293,9 @@ Transform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4685308581528736
+=======
+--- !u!4 &4718813051850718
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -353,8 +373,13 @@ Transform:
   m_LocalPosition: {x: 0.00000001695633, y: 0.33721548, z: -0.17819077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
   m_Father: {fileID: 4549217875524344}
   m_RootOrder: 2
+=======
+  m_Father: {fileID: 4756993099630164}
+  m_RootOrder: 0
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &54043897369255824
 Rigidbody:
@@ -463,6 +488,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
 --- !u!108 &108236681016601426
 Light:
   m_ObjectHideFlags: 1
@@ -546,6 +572,9 @@ Halo:
     rgba: 4294967295
   m_Size: 0.26
 --- !u!135 &135073502710619426
+=======
+--- !u!135 &135154936734879388
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -618,7 +647,11 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
   - {fileID: 2100000, guid: 169e4f8acb08f7a42b6dc5a0da567e91, type: 2}
+=======
+  - {fileID: 2100000, guid: 2f835fedca17769408b10a66ccf74859, type: 2}
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -807,6 +840,7 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+<<<<<<< HEAD:Assets/Prefabs/Blobs/BlackBlob.prefab
 --- !u!198 &198335677950458742
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -7435,3 +7469,5 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+=======
+>>>>>>> origin/master:Assets/Prefabs/Blobs/GenericBlob.prefab

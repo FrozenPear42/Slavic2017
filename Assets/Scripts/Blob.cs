@@ -98,7 +98,7 @@ public class Blob : MonoBehaviour
     protected virtual void setIdle(bool idle)
     {
         isIdle = idle;
-        if (!idle)
+        if (idle)
             isMoving = false;
     }
 
@@ -127,6 +127,8 @@ public class Blob : MonoBehaviour
         interval = intervals;
         targetPosition = position - transform.position;
         targetPosition2 = position;
+        targetPosition.y = transform.position.y;
+        targetPosition2.y = 0;
     }
 
     private void move(Vector3 position, float speed, float interval)
@@ -136,6 +138,7 @@ public class Blob : MonoBehaviour
             //Debug.Log("stopped");
             blobRigidBody.velocity = Vector3.zero;
             isMoving = false;
+            isIdle = true;
             return;
         }
 
