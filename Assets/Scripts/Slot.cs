@@ -61,11 +61,12 @@ public class Slot : MonoBehaviour {
         Instantiate(replace_object, transform.position, Quaternion.identity, transform);
 
         isCompleted = true;
-        transform.parent.GetComponent<Obelisk>().ReportSuccess();
+        transform.parent.GetComponent<Obelisk>().ReportSuccess(this);
     }
 
     bool IsThisWantedBlob(GameObject blob) {
         Blob comp = blob.GetComponent<Blob>();
+        if (comp == null) return false;
         return wanted_component.GetType().Equals(comp.GetType());
     }
 }

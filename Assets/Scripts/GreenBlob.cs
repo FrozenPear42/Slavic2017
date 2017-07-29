@@ -17,10 +17,11 @@ public class GreenBlob : Blob {
 	
 	// Update is called once per frame
 	override protected void Update () {
+        base.Update();
         if ((player.transform.position - transform.position).magnitude < range)
         {
             player.HasGreenFollower = true;
-            GameObject follower = GameObject.Instantiate<GameObject>(greenBlobFollower, player.transform.position, Quaternion.identity);
+            GameObject follower = GameObject.Instantiate<GameObject>(greenBlobFollower, player.transform.position+new Vector3(1,0,1), Quaternion.identity);
             follower.GetComponent<GreenBlobFollower>().setFollow(player.gameObject);
             Destroy(gameObject);
         }
