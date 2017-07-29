@@ -30,12 +30,13 @@ public class BlobSpawner : MonoBehaviour {
     }
 
     void SpawnBlob() {
-        Debug.Log("Spawn blob");
-        GameObject blob = Instantiate(blob_prefab, transform.position + Random.insideUnitSphere*spawn_radius, Quaternion.identity, transform);
+        Vector3 spawn_vector = Random.insideUnitSphere * spawn_radius;
+        spawn_vector.y = 0;
+        GameObject blob = Instantiate(blob_prefab, transform.position + spawn_vector, Quaternion.identity, transform);
         list_of_blobs.Add(blob);
     }
 
-    void BlobDied(GameObject blob) {
+    public void BlobDied(GameObject blob) {
         list_of_blobs.Remove(blob);
     }
 

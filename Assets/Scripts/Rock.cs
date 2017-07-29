@@ -23,9 +23,33 @@ public class Rock : MonoBehaviour, ISoundReactive
         Invoke("SetKinematic",setKinematicAfterTime);
     }
 
-    void Update()
-    {
+    public float maxSpeed = 1f;
+    public float maxAngularSpeed = 0.2f;
+
+    int collision_counter = 0;
+    bool collided = false;
+
+    void Update() {
+        /*Rigidbody rigid = GetComponent<Rigidbody>();
+        if (rigid.velocity.magnitude > maxSpeed) {
+            rigid.velocity = Vector3.ClampMagnitude(rigid.velocity, maxSpeed);
+        }
+        if (rigid.angularVelocity.magnitude > maxSpeed) {
+            rigid.velocity = Vector3.ClampMagnitude(rigid.angularVelocity, maxAngularSpeed);
+        }*/
+        /*if (collision_counter == 0 && collided) {
+            SetKinematic();
+        }*/
     }
+
+    /*private void OnCollisionEnter(Collision collision) {
+        collided = true;
+        collision_counter++;
+    }
+
+    private void OnCollisionExit(Collision collision) {
+        collision_counter--;
+    }*/
 
     public void reactOnSound(Player player)
     {

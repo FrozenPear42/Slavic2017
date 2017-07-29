@@ -53,7 +53,7 @@ public class Blob : MonoBehaviour
         {
             if (movingTimeStamp >= interval)
             {
-                Debug.Log("blob");
+                //Debug.Log("blob");
                 move(targetPosition, movementSpeed, interval);
                 movingTimeStamp = 0f;
             }
@@ -76,7 +76,7 @@ public class Blob : MonoBehaviour
 
     public void addForce(Vector3 position, float speed, float baseForce = 100f)
     {
-        Debug.Log("Add force: targetPosition: " + position + " this position: " + transform.position);
+        //Debug.Log("Add force: targetPosition: " + position + " this position: " + transform.position);
         isIdle = false;
         movementSpeed = speed;
         position = Vector3.Normalize(new Vector3(position.x, 0f, position.z));
@@ -105,7 +105,7 @@ public class Blob : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, targetPosition2) <= epsilon)
         {
-            Debug.Log("stopped");
+            //Debug.Log("stopped");
             blobRigidBody.velocity = Vector3.zero;
             isMoving = false;
             return;
@@ -132,15 +132,22 @@ public class Blob : MonoBehaviour
             else
             {
                 Vector3 moveBackVector = (originPosition - transform.position);
-                Debug.Log("move back: origin: " + originPosition + " pos: " + transform.position);
-                blobRigidBody.AddForce(new Vector3(moveBackVector.x*baseForce, 0, moveBackVector.z * baseForce) * moveBackForce * Time.deltaTime);
-          
+                //Debug.Log("move back: origin: " + originPosition + " pos: " + transform.position);
+                //blobRigidBody.AddForce(new Vector3(moveBackVector.x*baseForce, 0, moveBackVector.z * baseForce) * moveBackForce * Time.deltaTime);
+                moveToPosition(originPosition, movementSpeed, 1f);
             }
 
             timeStamp = 0f;
-            Debug.Log("Change rotation");
+            //Debug.Log("Change rotation");
         }
         timeStamp = timeStamp + Time.deltaTime;
+    }
+
+    protected virtual void OnDestroy()
+    {
+        BlobSpawner spawner = GetComponentInParent<BlobSpawner>();
+        if(spawner != null)
+            spawner.BlobDied(gameObject);
     }
 
 }

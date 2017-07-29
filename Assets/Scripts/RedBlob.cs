@@ -25,7 +25,7 @@ public class RedBlob : Blob, ISoundReactive
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject != null && collision.gameObject.GetComponent<Blob>() != null && collision.gameObject.GetComponent<PurpleBlob>() == null)
+        if (collision.gameObject != null && collision.gameObject.GetComponent<Blob>() != null && collision.gameObject.GetComponent<PurpleBlob>() == null && collision.gameObject.GetComponent<RedBlob>() == null)
         {
             Destroy(collision.gameObject);
             GameObject blob = Instantiate(blobPrefab, transform.position, Quaternion.identity);
@@ -39,10 +39,5 @@ public class RedBlob : Blob, ISoundReactive
             Destroy(gameObject);
         }
 
-    }
-
-    private void OnDestroy()
-    {
-        Debug.Log("On destroy red blob!");
     }
 }

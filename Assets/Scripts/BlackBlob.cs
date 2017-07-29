@@ -13,6 +13,9 @@ public class BlackBlob : Blob
     // Use this for initialization
     void Start()
     {
+        bool isGreenAbsorbed = false;
+        bool isRedAbsorbed = false;
+        bool isBlueAbsorbed = false;
     }
 
     // Update is called once per frame
@@ -25,12 +28,15 @@ public class BlackBlob : Blob
         var blob = collision.gameObject.GetComponent<Blob>();
         if (blob != null && blob.GetType() == typeof(BlueBlob) && !isBlueAbsorbed) {
             Destroy(collision.gameObject);
+            isBlueAbsorbed = true;
         }
         if (blob != null && blob.GetType() == typeof(GreenBlob) && !isGreenAbsorbed) {
             Destroy(collision.gameObject);
+            isGreenAbsorbed = true;
         }
         if (blob != null && blob.GetType() == typeof(RedBlob) && !isRedAbsorbed) {
             Destroy(collision.gameObject);
+            isRedAbsorbed = true;
         }
 
         if (isGreenAbsorbed && isRedAbsorbed && isBlueAbsorbed)
