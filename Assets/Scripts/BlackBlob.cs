@@ -24,7 +24,7 @@ public class BlackBlob : Blob
         {
             var white = Instantiate(whiteBlobPrefab);
             white.transform.position = transform.position;
-            white.GetComponent<Blob>().moveToPosition(whiteSlot.transform.position, movementSpeed);
+            white.GetComponent<Blob>().moveToPosition(whiteSlot.transform.position, movementSpeed, 2f);
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }

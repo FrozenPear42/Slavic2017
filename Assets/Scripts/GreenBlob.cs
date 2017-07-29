@@ -58,7 +58,7 @@ public class GreenBlob : Blob, ISoundReactive
     void Follow()
     {
         Vector3 diff = player.transform.position - transform.position;
-        addForce(diff, speed);
+        addForce(diff, speed, baseForce);
     }
 
     public void reactOnSound(Player player)
