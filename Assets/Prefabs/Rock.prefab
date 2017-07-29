@@ -19,13 +19,28 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4256293676681736}
-  - component: {fileID: 33707549125905200}
   - component: {fileID: 136166477119609098}
-  - component: {fileID: 23078535732149402}
   - component: {fileID: 54084596740212916}
   - component: {fileID: 114359033845740348}
   m_Layer: 0
   m_Name: Rock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1987014327405622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4320259051876536}
+  - component: {fileID: 33508285182585872}
+  - component: {fileID: 23787312587938554}
+  m_Layer: 0
+  m_Name: Cristal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,18 +53,32 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1639623083474858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.008083725, z: 0.1266098}
+  m_LocalPosition: {x: -1.5861396, y: 1.159, z: -8.988628}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4320259051876536}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23078535732149402
+--- !u!4 &4320259051876536
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987014327405622}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.053860426, y: -0.624, z: 0.02862835}
+  m_LocalScale: {x: 2.1924803, y: 2.1924813, z: 1.4464753}
+  m_Children: []
+  m_Father: {fileID: 4256293676681736}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23787312587938554
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1639623083474858}
+  m_GameObject: {fileID: 1987014327405622}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +86,8 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 16ec79e4725ddb445a507fe1a14c6344, type: 2}
+  - {fileID: 2100000, guid: f87fd70c48f316d48b7877ce9b09acd6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -65,7 +95,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_SelectedEditorRenderState: 3
@@ -76,13 +106,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33707549125905200
+--- !u!33 &33508285182585872
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1639623083474858}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_GameObject: {fileID: 1987014327405622}
+  m_Mesh: {fileID: 4300000, guid: c94b419097201b743b9cd37307c0224d, type: 3}
 --- !u!54 &54084596740212916
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -114,7 +144,7 @@ MonoBehaviour:
   setKinematicAfterTime: 3
   blackBlobPrefab: {fileID: 1733007534958822, guid: a1411ac728f9bf046b1d07da03a77c43,
     type: 2}
-  brokenRockPrefab: {fileID: 1331966031269230, guid: f816f3cb335d09047a2185b8fd99d2c7,
+  brokenRockPrefab: {fileID: 1764263426719306, guid: b039f73adb6340c48a282ee1c8b94ce6,
     type: 2}
   maxSpeed: 1
   maxAngularSpeed: 0.01
@@ -127,7 +157,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.7
+  m_Height: 2.2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

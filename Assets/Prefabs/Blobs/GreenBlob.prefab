@@ -526,8 +526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scanRange: 10
   movementSpeed: 20
-  cooldownPeriodInSeconds: 4
-  baseForce: 100
+  cooldownPeriodInSeconds: 2
+  baseForce: 500
   mainColor: {r: 0.07586217, g: 1, b: 0, a: 0}
   rimColor: {r: 0.44852942, g: 1, b: 0.56643, a: 0}
   rimPower: 2.2
