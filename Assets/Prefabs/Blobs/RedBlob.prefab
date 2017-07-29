@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 4722252533954438}
   - component: {fileID: 135102172937146834}
   - component: {fileID: 54305971516061498}
-  - component: {fileID: 114142164274121968}
+  - component: {fileID: 114023806380068868}
   m_Layer: 9
   m_Name: RedBlob
   m_TagString: Untagged
@@ -513,7 +513,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114142164274121968
+--- !u!114 &114023806380068868
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -521,17 +521,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1585508067781530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0126481abdc21a42bac31f59d5ba683, type: 3}
+  m_Script: {fileID: 11500000, guid: 984f2a1393190474fa2a727300e62455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scanRange: 10
   movementSpeed: 20
   cooldownPeriodInSeconds: 4
   baseForce: 100
-  mainColor: {r: 1, g: 1, b: 1, a: 0}
-  rimColor: {r: 1, g: 1, b: 1, a: 0}
+  mainColor: {r: 1, g: 0, b: 0.020689487, a: 0}
+  rimColor: {r: 1, g: 0.09558821, b: 0.09558821, a: 0}
   rimPower: 2.2
-  targetSlot: {fileID: 0}
+  blobPrefab: {fileID: 0}
 --- !u!122 &122091351362589576
 Halo:
   m_ObjectHideFlags: 1
