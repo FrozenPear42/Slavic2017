@@ -25,7 +25,7 @@ public class BlueBlob : Blob {
         if (are_there_bad_guys) {
             Debug.Log("HE IS HERE. RUN FOR YOUR LIVES");
             where_to_go = transform.position + (transform.position - avg).normalized * (scanRange + 1);
-            base.addForce(where_to_go, run_speed);
+            base.addForce(where_to_go, run_speed, base.baseForce);
         }
 
         Debug.Log((transform.position - where_to_go).magnitude);

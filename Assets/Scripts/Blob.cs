@@ -22,6 +22,13 @@ public class Blob : MonoBehaviour
     private float travelRange = 2f;
     private Vector3 originPosition;
 
+    private float epsilon = 1f;
+
+    private float movingTimeStamp = 0f;
+    private bool isMoving = false;
+    private Vector3 targetPosition;
+    private float interval = 1f;
+
     // Use this for initialization
     protected virtual void Start()
     {
@@ -40,6 +47,23 @@ public class Blob : MonoBehaviour
         {
             OsmoticMove();
         }
+        else 
+        if (isMoving)
+        {
+            if (movingTimeStamp >= interval)
+            {
+                Debug.Log("blob");
+                moveToPosition(targetPosition, movementSpeed, interval);
+                movingTimeStamp = 0f;
+            }
+        }
+
+        movingTimeStamp += Time.deltaTime;
+    }
+
+    public bool IsMoving()
+    {
+        return isMoving;
     }
 
     protected virtual void setIdle(bool idle)
@@ -47,11 +71,28 @@ public class Blob : MonoBehaviour
         isIdle = idle;
     }
 
-    public void addForce(Vector3 position, float speed)
+    public void addForce(Vector3 position, float speed, float baseForce)
     {
         isIdle = false;
         movementSpeed = speed;
+        position = Vector3.Normalize(position);
         blobRigidBody.AddForce(new Vector3(baseForce * position.x, 0, baseForce * position.z) * movementSpeed * Time.deltaTime);
+    }
+
+    public void moveToPosition(Vector3 position, float speed, float intervals)
+    {
+        isMoving = true;
+        interval = intervals;
+        targetPosition = position;
+
+        if (Vector3.Distance(transform.position, targetPosition) <= epsilon)
+        {
+            Debug.Log("stopped");
+            blobRigidBody.velocity = Vector3.zero;
+            isMoving = false;
+        }
+
+        addForce(position, speed, baseForce);
     }
 
     public Collider[] getCollidersInRange()
