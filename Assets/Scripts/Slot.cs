@@ -16,10 +16,13 @@ public class Slot : MonoBehaviour {
     bool isCompleted;
     bool isPulling;
 
+    private ParticleSystem particles;
+
     void Start () {
         isCompleted = false;
         isPulling = false;
-	}
+        particles = GetComponentInChildren < ParticleSystem>();
+    }
 
 	void Update () {
         if (isPulling) {
@@ -62,6 +65,11 @@ public class Slot : MonoBehaviour {
 
         isCompleted = true;
         transform.parent.GetComponent<Obelisk>().ReportSuccess(this);
+
+        var mainParticles = particles.main;
+        mainParticles.startLifetime = 100.0f;
+        mainParticles.startSpeed = 1.5f;
+
     }
 
     bool IsThisWantedBlob(GameObject blob) {

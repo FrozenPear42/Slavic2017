@@ -54,7 +54,7 @@ public class BlackBlob : Blob
     GameObject FindWhiteSlot() {
         Slot[] slots = FindObjectsOfType<Slot>();
         foreach (Slot slot in slots) {
-            if (slot.gameObject.name == "White Slot") {
+            if (slot.gameObject.name == "WhiteSlot") {
                 return slot.gameObject;
             }
         }
