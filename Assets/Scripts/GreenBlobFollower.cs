@@ -8,7 +8,7 @@ public class GreenBlobFollower : Blob, ISoundReactive{
 
     // Use this for initialization
     override protected void Start () {
-        base.setIdle(false);
+        
 	}
 
     // Update is called once per frame
