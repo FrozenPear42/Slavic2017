@@ -22,7 +22,10 @@ public class RedBlob :  Blob, ISoundReactive {
 
     public void OnCollisionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
+        if (collision.gameObject.GetComponent<Blob>() != null || collision.gameObject.GetComponent<Player>() != null)
+        {
+            Destroy(collision.gameObject);
+        }
         Debug.Log("spawn fioletowego");
         Destroy(this);
     }

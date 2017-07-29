@@ -41,7 +41,6 @@ public class Blob : MonoBehaviour
         else
         {
             transform.position = Vector3.LerpUnclamped(transform.position, targetPos, movementSpeed / 5.0f * Time.deltaTime);
-            Debug.Log("my pos: " + transform.position + " target pos: " + targetPos)
         }
     }
 
