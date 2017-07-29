@@ -68,16 +68,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 isEmmitingSound = false;
             }
-            else
-            {
-                findSoundReactObjects();
-            }
+
         }
         if (!isEmmitingSound && (Input.GetKey(soundButton) || Input.GetKey(soundKey)))
         {
             playerAudioSource.Play();
             lastSoundEventTime = Time.fixedTime;
             isEmmitingSound = true;
+            findSoundReactObjects();
         }
     }
 
