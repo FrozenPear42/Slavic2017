@@ -27,17 +27,17 @@ public class GreenBlob : Blob, ISoundReactive
         base.Update();
         switch (state) {
             case State.Idle:
-                Debug.Log("Idle");
+                //Debug.Log("Idle");
                 if (PlayerInRange())
                     StartFollowing();
                 break;
             case State.Following:
-                Debug.Log("Following");
+                //Debug.Log("Following");
                 if (!PlayerInRange())
                     Follow();
                 break;
             case State.Cooldown:
-                Debug.Log("Cooldown");
+                //Debug.Log("Cooldown");
                 if ((cooldownStart + cooldown) < Time.time)
                 {
                     state = State.Idle;

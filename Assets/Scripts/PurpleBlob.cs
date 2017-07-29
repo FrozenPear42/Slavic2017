@@ -35,17 +35,14 @@ public class PurpleBlob : Blob, ISoundReactive {
         switch (state)
         {
             case State.Idle:
-                Debug.Log("Idle");
                 if (PlayerInRange())
                     StartFollowing();
                 break;
             case State.Following:
-                Debug.Log("Following");
                 if (!PlayerInRange())
                     Follow();
                 break;
             case State.Cooldown:
-                Debug.Log("Cooldown");
                 if ((cooldownStart + cooldown) < Time.time)
                 {
                     state = State.Idle;

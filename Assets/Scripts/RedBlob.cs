@@ -25,7 +25,7 @@ public class RedBlob :  Blob, ISoundReactive {
         if (collision.gameObject.GetComponent<Blob>() != null || collision.gameObject.GetComponent<Player>() != null)
         {
             Destroy(collision.gameObject);
-            Debug.Log("spawn fioletowego");
+            //Debug.Log("spawn fioletowego");
             Destroy(this);
         }
         
@@ -33,6 +33,6 @@ public class RedBlob :  Blob, ISoundReactive {
 
     private void OnDestroy()
     {
-        Debug.Log("On destroy red blob!");
+        //Debug.Log("On destroy red blob!");
     }
 }
