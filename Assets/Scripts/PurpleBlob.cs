@@ -59,7 +59,7 @@ public class PurpleBlob : Blob, ISoundReactive {
 
     void StartFollowing()
     {
-        player.HasAnyFollowers = true;
+        player.HasAnyFollower = true;
         state = State.Following;
     }
 
@@ -71,7 +71,18 @@ public class PurpleBlob : Blob, ISoundReactive {
 
     public void reactOnSound(Player player)
     {
-        state = State.Cooldown;
-        cooldownStart = Time.time;
+        if (state == State.Following)
+        {
+            state = State.Cooldown;
+            cooldownStart = Time.time;
+            player.HasAnyFollower = false;
+        }
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        if (state == State.Following)
+            player.HasAnyFollower = false;
     }
 }
