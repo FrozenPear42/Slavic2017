@@ -72,7 +72,7 @@ public class Blob : MonoBehaviour
         isIdle = idle;
     }
 
-    public void addForce(Vector3 position, float speed, float baseForce)
+    public void addForce(Vector3 position, float speed, float baseForce = 100f)
     {
         Debug.Log("Add force: targetPosition: " + position + " this position: " + transform.position);
         isIdle = false;
