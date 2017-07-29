@@ -20,8 +20,8 @@ public class GreenBlob : Blob {
         if ((player.transform.position - transform.position).magnitude < range)
         {
             player.HasGreenFollower = true;
-            GameObject.Instantiate<GameObject>(greenBlobFollower);
-            greenBlobFollower.GetComponent<GreenBlobFollower>().setFollow(player.gameObject);
+            GameObject follower = GameObject.Instantiate<GameObject>(greenBlobFollower);
+            follower.GetComponent<GreenBlobFollower>().setFollow(player.gameObject);
             Destroy(gameObject);
         }
 	}
