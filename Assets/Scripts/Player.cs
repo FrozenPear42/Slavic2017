@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     public float soundDelay = 2.0f;
     public float soundRadius = 100.0f;
 
+    private Animator animator;
+
     private bool isEmmitingSound = false;
 
     public bool IsEmmitingSound
@@ -49,6 +51,7 @@ public class Player : MonoBehaviour
         hasAnyFollower = false;
         hasGreenFollower = false;
         playerAudioSource = GetComponent<AudioSource>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -61,6 +64,7 @@ public class Player : MonoBehaviour
         y = Input.GetAxis("Vertical");
 
         playerBody.AddForce(new Vector3(baseForce * x * Time.deltaTime, 0, baseForce * y * Time.deltaTime));
+        animator.SetFloat("Speed", playerBody.velocity.magnitude);
 
         if (isEmmitingSound)
         {

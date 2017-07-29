@@ -27,14 +27,17 @@ public class GreenBlob : Blob, ISoundReactive
         base.Update();
         switch (state) {
             case State.Idle:
+                Debug.Log("Idle");
                 if (PlayerInRange())
                     StartFollowing();
                 break;
             case State.Following:
+                Debug.Log("Following");
                 if (!PlayerInRange())
                     Follow();
                 break;
             case State.Cooldown:
+                Debug.Log("Cooldown");
                 if ((cooldownStart + cooldown) < Time.time)
                 {
                     state = State.Idle;
@@ -58,7 +61,7 @@ public class GreenBlob : Blob, ISoundReactive
     void Follow()
     {
         Vector3 diff = player.transform.position - transform.position;
-        addForce(diff, speed, baseForce);
+        addForce(diff, speed);
     }
 
     public void reactOnSound(Player player)
