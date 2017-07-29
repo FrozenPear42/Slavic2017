@@ -12,6 +12,7 @@ public class Rock : MonoBehaviour, ISoundReactive
 
     public int targetHitCount = 3;
     public float resetTime = 5.0f;
+    public float setKinematicAfterTime = 3f;
 
     public GameObject blackBlobPrefab;
     public GameObject brokenRockPrefab;
@@ -19,6 +20,7 @@ public class Rock : MonoBehaviour, ISoundReactive
     void Start()
     {
         rockBody = GetComponent<Rigidbody>();
+        Invoke("SetKinematic",setKinematicAfterTime);
     }
 
     void Update()
@@ -48,6 +50,10 @@ public class Rock : MonoBehaviour, ISoundReactive
         var broken = Instantiate(brokenRockPrefab);
         broken.transform.position = transform.position;
         Destroy(gameObject);
+    }
+
+    void SetKinematic() {
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 
 }

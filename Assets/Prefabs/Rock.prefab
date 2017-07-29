@@ -25,11 +25,7 @@ GameObject:
   - component: {fileID: 54084596740212916}
   - component: {fileID: 114359033845740348}
   m_Layer: 0
-<<<<<<< HEAD:Assets/Prefabs/Blobs/BlueBlobCube.prefab
-  m_Name: BlueBlobCube
-=======
   m_Name: Rock
->>>>>>> 192f9c6c716a4beb5ac59429a6e58c6d7a2c61a9:Assets/Prefabs/Rock.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

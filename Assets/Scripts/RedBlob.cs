@@ -2,37 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedBlob :  Blob, ISoundReactive { 
-
-	// Use this for initialization
-	override protected void Start () {
+public class RedBlob : Blob, ISoundReactive
+{
+    public GameObject blobPrefab;
+    // Use this for initialization
+    override protected void Start()
+    {
         base.Start();
-	}
-	
-	// Update is called once per frame
-	override protected void Update () {
+    }
+
+    // Update is called once per frame
+    override protected void Update()
+    {
         base.Update();
-	}
+    }
 
     public void reactOnSound(Player player)
     {
-        addForce(player.transform.position, movementSpeed);
+        addChargeForce(player.gameObject.transform.position - transform.position, 20 * movementSpeed);
         //base.moveToPosition(player.gameObject.transform.position, base.movementSpeed, 2f);
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Blob>() != null || collision.gameObject.GetComponent<Player>() != null)
+        if (collision.gameObject != null && collision.gameObject.GetComponent<Blob>() != null && collision.gameObject.GetComponent<PurpleBlob>() == null)
         {
             Destroy(collision.gameObject);
-            //Debug.Log("spawn fioletowego");
-            Destroy(this);
+            GameObject blob = Instantiate(blobPrefab, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
-        
+        else
+        if (collision.gameObject.GetComponent<Player>() != null)
+        {
+            // todo: move to starting position
+
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnDestroy()
     {
-        //Debug.Log("On destroy red blob!");
+        Debug.Log("On destroy red blob!");
     }
 }

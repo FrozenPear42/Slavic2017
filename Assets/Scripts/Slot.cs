@@ -31,7 +31,7 @@ public class Slot : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other) {
-        if (IsThisWantedBlob(other.gameObject)) {
+        if (IsThisWantedBlob(other.gameObject) && !isPulling && !isCompleted) {
             SetPullingBlob(other.gameObject);
             //Debug.Log("same type");
             GetComponent<Collider>().enabled = false;
