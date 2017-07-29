@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
     public float maxSpeed = 10.0f;
 
+    public GameObject ringPrefab;
+
     private Animator animator;
 
     private bool isEmmitingSound = false;
@@ -101,6 +103,8 @@ public class Player : MonoBehaviour
         if (!isEmmitingSound && (Input.GetKey(soundButton) || Input.GetKey(soundKey)))
         {
             playerAudioSource.Play();
+            var ring = Instantiate(ringPrefab, this.gameObject.transform);
+
             lastSoundEventTime = Time.fixedTime;
             isEmmitingSound = true;
             findSoundReactObjects();

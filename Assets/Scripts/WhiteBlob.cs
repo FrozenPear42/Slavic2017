@@ -7,13 +7,15 @@ public class WhiteBlob : Blob
 
     public GameObject targetSlot;
 
-	// Use this for initialization
-	void Start () {
-        moveToPosition(targetSlot.transform.position, movementSpeed, 0.5f);
+    // Use this for initialization
+    override protected void Start()
+    {
+        base.Start();
+        moveToPosition(targetSlot.transform.position, movementSpeed, 100f);
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    override protected void Update () {
 		
 	}
 }
