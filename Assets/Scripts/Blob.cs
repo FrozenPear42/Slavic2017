@@ -128,7 +128,7 @@ public class Blob : MonoBehaviour
         targetPosition = position - transform.position;
         targetPosition2 = position;
         targetPosition.y = transform.position.y;
-        targetPosition2.y = 0;
+        targetPosition2.y = transform.position.y;
     }
 
     private void move(Vector3 position, float speed, float interval)
