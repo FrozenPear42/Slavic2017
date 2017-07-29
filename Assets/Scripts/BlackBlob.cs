@@ -16,6 +16,7 @@ public class BlackBlob : Blob
         bool isGreenAbsorbed = false;
         bool isRedAbsorbed = false;
         bool isBlueAbsorbed = false;
+        whiteSlot = FindWhiteSlot();
     }
 
     // Update is called once per frame
@@ -41,11 +42,22 @@ public class BlackBlob : Blob
 
         if (isGreenAbsorbed && isRedAbsorbed && isBlueAbsorbed)
         {
-            var white = Instantiate(whiteBlobPrefab);
+            GameObject white = Instantiate(whiteBlobPrefab);
             white.transform.position = transform.position;
+            white.GetComponent<WhiteBlob>().targetSlot = whiteSlot;
 
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
+    }
+
+    GameObject FindWhiteSlot() {
+        Slot[] slots = FindObjectsOfType<Slot>();
+        foreach (Slot slot in slots) {
+            if (slot.gameObject.name == "White Slot") {
+                return slot.gameObject;
+            }
+        }
+        return gameObject;
     }
 }
