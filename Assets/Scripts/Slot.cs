@@ -70,6 +70,8 @@ public class Slot : MonoBehaviour {
         mainParticles.startLifetime = 100.0f;
         mainParticles.startSpeed = 1.5f;
 
+        GetComponent<AudioSource>().Play();
+
     }
 
     bool IsThisWantedBlob(GameObject blob) {

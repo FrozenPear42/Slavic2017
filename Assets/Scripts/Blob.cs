@@ -106,8 +106,9 @@ public class Blob : MonoBehaviour
     {
         //Debug.Log("Add force: targetPosition: " + position + " this position: " + transform.position);
         isIdle = false;
+        movementSpeed = speed;
         position = Vector3.Normalize(new Vector3(position.x, 0f, position.z));
-        blobRigidBody.AddForce(new Vector3(baseForce * position.x, 0, baseForce * position.z) * speed * Time.deltaTime);
+        blobRigidBody.AddForce(new Vector3(baseForce * position.x, 0, baseForce * position.z) * movementSpeed * Time.deltaTime);
     }
 
     public void addChargeForce(Vector3 position, float speed, float force = 100f)

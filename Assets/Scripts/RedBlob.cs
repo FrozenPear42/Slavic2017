@@ -41,6 +41,7 @@ public class RedBlob : Blob, ISoundReactive
 
             var playerBody = player.GetComponent<Rigidbody>();
             playerBody.AddForce(player.baseForce * 0.5f  * -playerBody.velocity);
+            GetComponent<AudioSource>().Play();
         }
     }
 }
