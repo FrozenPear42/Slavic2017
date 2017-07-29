@@ -31,7 +31,6 @@ public class BlueBlob : Blob {
             light.transform.position = where_to_go;
         }
 
-        Debug.Log(base.targetPos);
         Debug.Log((transform.position - where_to_go).magnitude);
         if ((transform.position - where_to_go).magnitude < eps) {
             Debug.Log("IM HERE, RESTING");
