@@ -32,7 +32,7 @@ public class BlueBlob : Blob {
         are_there_bad_guys = false;
         int num = 0;
         foreach (Collider col in colliders) {
-            if (col.GetComponent<Player>() != null) {
+            if (col.GetComponent<Player>() != null && col.GetComponent<Player>().HasGreenFollower) {
                 player_position = col.transform.position;
                 are_there_bad_guys = true;
             }
