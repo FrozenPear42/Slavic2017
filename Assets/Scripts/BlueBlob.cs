@@ -11,12 +11,10 @@ public class BlueBlob : Blob {
     bool are_there_bad_guys = false;
 
     Vector3 where_to_go = Vector3.zero;
-    GameObject light;
 
     override protected void Start () {
         base.Start();
         base.setIdle(true);
-        light = GameObject.Find("Point light");
         scanRange = 5;
 	}
 
@@ -27,8 +25,7 @@ public class BlueBlob : Blob {
         if (are_there_bad_guys) {
             Debug.Log("HE IS HERE. RUN FOR YOUR LIVES");
             where_to_go = transform.position + (transform.position - avg).normalized * (scanRange + 1);
-            base.moveToPosition(where_to_go, run_speed);
-            light.transform.position = where_to_go;
+            base.addForce(where_to_go, run_speed);
         }
 
         Debug.Log((transform.position - where_to_go).magnitude);

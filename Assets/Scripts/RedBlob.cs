@@ -16,7 +16,7 @@ public class RedBlob :  Blob, ISoundReactive {
 
     public void reactOnSound(Player player)
     {
-        moveToPosition(player.transform.position, movementSpeed);
+        addForce(player.transform.position, movementSpeed);
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -24,9 +24,10 @@ public class RedBlob :  Blob, ISoundReactive {
         if (collision.gameObject.GetComponent<Blob>() != null || collision.gameObject.GetComponent<Player>() != null)
         {
             Destroy(collision.gameObject);
+            Debug.Log("spawn fioletowego");
+            Destroy(this);
         }
-        Debug.Log("spawn fioletowego");
-        Destroy(this);
+        
     }
 
     private void OnDestroy()
