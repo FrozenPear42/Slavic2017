@@ -12,19 +12,14 @@ public class Blob : MonoBehaviour
     private float timeStamp = 0f;
 
     private Rigidbody blobRigidBody;
-    private Vector3 randomDirectionVector = Vector3.forward;
-    private Vector3 newPosition = Vector3.forward;
+    private Vector3 randomDirectionVector = Vector3.zero;
+    private Vector3 newPosition = Vector3.zero;
 
     private BlobSpawner blobSpawner;
 
     private bool isIdle = true;
     private bool isTargetPosSet = false;
     private Vector3 targetPos;
-
-    private void Awake()
-    {
-        targetPos = transform.position;
-    }
 
     // Use this for initialization
     protected virtual void Start()
