@@ -532,7 +532,7 @@ MonoBehaviour:
   rimColor: {r: 0.3455882, g: 0.40425944, b: 1, a: 0}
   rimPower: 2.2
   player_wage: 5
-  run_speed: 10
+  run_speed: 40
   eps: 1
 --- !u!122 &122028397829583676
 Halo:

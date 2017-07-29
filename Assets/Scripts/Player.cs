@@ -28,8 +28,9 @@ public class Player : MonoBehaviour
     }
 
     private bool hasAnyFollower = false;
-    public bool HasAnyFollowers { get; set; }
 
+    private int greenFollowersCount = 0;
+    private int anyFollowersCount = 0;
     private bool hasGreenFollower = false;
 
     public bool HasGreenFollower
@@ -37,8 +38,30 @@ public class Player : MonoBehaviour
         get { return hasGreenFollower; }
         set
         {
-            hasAnyFollower = true;
-            hasGreenFollower = true;
+            Debug.Log("Value: " + value);
+            if (value == true)
+            {
+                Debug.Log("Incrementing");
+                ++greenFollowersCount;
+                ++anyFollowersCount;
+            }
+            else
+            {
+                Debug.Log("Derementing");
+                --greenFollowersCount;
+                --anyFollowersCount;
+            }
+        }
+    }
+    public bool HasAnyFollower
+    {
+        get { return hasAnyFollower;  }
+        set
+        {
+            if (value == true)
+                ++anyFollowersCount;
+            else
+                --anyFollowersCount;
         }
     }
 
@@ -80,6 +103,9 @@ public class Player : MonoBehaviour
             isEmmitingSound = true;
             findSoundReactObjects();
         }
+
+        hasGreenFollower = (greenFollowersCount > 0);
+        hasAnyFollower = (anyFollowersCount > 0);
     }
 
     void findSoundReactObjects()
