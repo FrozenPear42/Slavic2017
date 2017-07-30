@@ -151,27 +151,6 @@ Prefab:
       propertyPath: m_Name
       value: BlobSpawnerBlue
       objectReference: {fileID: 0}
-    - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
-        type: 2}
-      propertyPath: blob_prefab
-      value: 
-      objectReference: {fileID: 1308225961196310, guid: bf4d0be9617cf4446a7e0265b2b47435,
-        type: 2}
-    - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
-        type: 2}
-      propertyPath: max_blobs_number
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
-        type: 2}
-      propertyPath: check_interval
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
-        type: 2}
-      propertyPath: spawn_radius
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
   m_IsPrefabParent: 0
@@ -680,7 +659,7 @@ Prefab:
     - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
         type: 2}
       propertyPath: spawn_radius
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
@@ -771,20 +750,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
-        type: 2}
-      propertyPath: blob_prefab
-      value: 
-      objectReference: {fileID: 1732117994426182, guid: 059abd93939e3204fb1e134b63bbc7c7,
-        type: 2}
     - target: {fileID: 1062983934113906, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
       propertyPath: m_Name
       value: BlobSpawnerGreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
-        type: 2}
-      propertyPath: spawn_radius
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
