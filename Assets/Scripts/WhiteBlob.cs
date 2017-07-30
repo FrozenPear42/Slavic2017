@@ -8,10 +8,11 @@ public class WhiteBlob : Blob
     public GameObject targetSlot;
 
     // Use this for initialization
-    override protected void Start()
+    protected override void Start()
     {
         base.Start();
-        moveToPosition(targetSlot.transform.position, movementSpeed, 1f);
+        setIdle(false);
+        moveToPosition(targetSlot.transform.position, movementSpeed*10, 1f);
         GetComponent<AudioSource>().Play();
     }
 }
