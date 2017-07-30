@@ -609,7 +609,7 @@ MonoBehaviour:
   scanRange: 10
   movementSpeed: 20
   cooldownPeriodInSeconds: 4
-  baseForce: 100
+  baseForce: 500
   mainColor: {r: 0.07352942, g: 0.07352942, b: 0.07352942, a: 0}
   rimColor: {r: 0.1397059, g: 0.1397059, b: 0.1397059, a: 0}
   rimPower: 2.2
