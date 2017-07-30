@@ -151,6 +151,12 @@ Prefab:
       propertyPath: m_Name
       value: BlobSpawnerBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
+        type: 2}
+      propertyPath: blob_prefab
+      value: 
+      objectReference: {fileID: 1308225961196310, guid: bf4d0be9617cf4446a7e0265b2b47435,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
   m_IsPrefabParent: 0
@@ -801,30 +807,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114313548231735806, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
-        type: 2}
-      propertyPath: replace_object
-      value: 
-      objectReference: {fileID: 1733007534958822, guid: 7fe534f681dac4e49aaa3fd598e15cb0,
-        type: 2}
-    - target: {fileID: 114271674943338588, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
-        type: 2}
-      propertyPath: replace_object
-      value: 
-      objectReference: {fileID: 1733007534958822, guid: 7fe534f681dac4e49aaa3fd598e15cb0,
-        type: 2}
-    - target: {fileID: 114756001953310272, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
-        type: 2}
-      propertyPath: replace_object
-      value: 
-      objectReference: {fileID: 1733007534958822, guid: 7fe534f681dac4e49aaa3fd598e15cb0,
-        type: 2}
-    - target: {fileID: 114841439566694040, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
-        type: 2}
-      propertyPath: replace_object
-      value: 
-      objectReference: {fileID: 1733007534958822, guid: 7fe534f681dac4e49aaa3fd598e15cb0,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f74984b9e3b18c41bed477f42e8a4e4, type: 2}
   m_IsPrefabParent: 0
