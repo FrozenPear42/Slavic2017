@@ -23,7 +23,11 @@ public class EndGameScript : MonoBehaviour {
             endSceneOperation.allowSceneActivation = true;
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("EndScene"));
         }
-	}
+        if (Input.GetKey("p")) {
+            endSceneOperation.allowSceneActivation = true;
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("EndScene"));
+        }
+    }
 
 
     private void OnTriggerEnter(Collider other)
