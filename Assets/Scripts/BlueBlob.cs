@@ -8,12 +8,17 @@ public class BlueBlob : Blob
     public float run_speed;
     public float eps = 1f;
 
+    Player player;
+    public float soundRange;
+
     bool are_there_bad_guys = false;
 
     override protected void Start()
     {
         base.Start();
         base.setIdle(true);
+        player = FindObjectOfType<Player>();
+
     }
 
     public bool isGoingToBeIdle = false;
@@ -27,7 +32,7 @@ public class BlueBlob : Blob
             isGoingToBeIdle = false;
             Vector3 diff = transform.position - avg;
             base.addForce(diff, run_speed / diff.magnitude, base.baseForce);
-            if (!GetComponent<AudioSource>().isPlaying)
+            if (!GetComponent<AudioSource>().isPlaying && PlayerInSoundRange())
                 GetComponent<AudioSource>().Play(); //TODO: gdzies to trzeba by wrzucicc
         }
         else if (!isGoingToBeIdle)
@@ -75,5 +80,10 @@ public class BlueBlob : Blob
     {
         //Debug.Log("IDLE NOW");
         setIdle(true);
+    }
+
+    bool PlayerInSoundRange()
+    {
+        return (player.transform.position - transform.position).magnitude < soundRange;
     }
 }
