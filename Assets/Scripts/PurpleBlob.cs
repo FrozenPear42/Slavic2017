@@ -61,6 +61,7 @@ public class PurpleBlob : Blob, ISoundReactive {
     {
         player.HasAnyFollower = true;
         state = State.Following;
+        GetComponent<AudioSource>().Play();
     }
 
     void Follow()

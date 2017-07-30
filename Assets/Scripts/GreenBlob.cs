@@ -57,6 +57,8 @@ public class GreenBlob : Blob, ISoundReactive
         player.HasGreenFollower = true;
         state = State.Following;
         setIdle(false);
+
+        GetComponent<AudioSource>().Play();
     }
 
     void Follow()

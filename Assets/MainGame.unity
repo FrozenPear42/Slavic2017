@@ -1482,6 +1482,36 @@ Prefab:
       value: 
       objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 114544830868758202, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
+        type: 2}
+      propertyPath: replace_object
+      value: 
+      objectReference: {fileID: 1733007534958822, guid: a1411ac728f9bf046b1d07da03a77c43,
+        type: 2}
+    - target: {fileID: 114313548231735806, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
+        type: 2}
+      propertyPath: replace_object
+      value: 
+      objectReference: {fileID: 1733007534958822, guid: a1411ac728f9bf046b1d07da03a77c43,
+        type: 2}
+    - target: {fileID: 114271674943338588, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
+        type: 2}
+      propertyPath: replace_object
+      value: 
+      objectReference: {fileID: 1733007534958822, guid: a1411ac728f9bf046b1d07da03a77c43,
+        type: 2}
+    - target: {fileID: 114756001953310272, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
+        type: 2}
+      propertyPath: replace_object
+      value: 
+      objectReference: {fileID: 1733007534958822, guid: a1411ac728f9bf046b1d07da03a77c43,
+        type: 2}
+    - target: {fileID: 114841439566694040, guid: 3f74984b9e3b18c41bed477f42e8a4e4,
+        type: 2}
+      propertyPath: replace_object
+      value: 
+      objectReference: {fileID: 1733007534958822, guid: a1411ac728f9bf046b1d07da03a77c43,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f74984b9e3b18c41bed477f42e8a4e4, type: 2}
   m_IsPrefabParent: 0

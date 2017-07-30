@@ -24,7 +24,9 @@ public class BlueBlob : Blob {
             isGoingToBeIdle = false;
             Vector3 diff = transform.position - avg;
             base.addForce(diff, run_speed/diff.magnitude, base.baseForce);
-        } else if (!isGoingToBeIdle){
+            //TODO: GetComponent<AudioSource>().Play(); gdzies to trzeba by wrzucicc
+        }
+        else if (!isGoingToBeIdle){
             isGoingToBeIdle = true;
             Invoke("MakeIdle", 3f);
         }
@@ -42,6 +44,7 @@ public class BlueBlob : Blob {
                 player_position = col.transform.position;
                 are_there_bad_guys = true;
             }
+            
             if (col.GetComponent<GreenBlob>() != null) {
                 are_there_bad_guys = true;
                 num++;

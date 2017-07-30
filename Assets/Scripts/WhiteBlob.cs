@@ -12,5 +12,6 @@ public class WhiteBlob : Blob
     {
         base.Start();
         moveToPosition(targetSlot.transform.position, movementSpeed, 1f);
-	}
+        GetComponent<AudioSource>().Play();
+    }
 }
