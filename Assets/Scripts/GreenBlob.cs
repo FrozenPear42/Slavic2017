@@ -10,24 +10,39 @@ public class GreenBlob : Blob, ISoundReactive
     public float range;
     public float cooldown;
     public float speed;
+    public float soundChance;
+    public float soundRange;
+
+    public AudioClip idleSound;
+    public AudioClip followSound;
+    public AudioClip stopFollowingSound;
+    AudioSource audioSource;
 
     enum State { Idle, Following, Cooldown };
     State state = State.Idle;
     float cooldownStart = 0.0f;
+    Animator animator;
 
     // Use this for initialization
     override protected void Start () {
         base.Start();
         player = FindObjectOfType<Player>();
         base.setIdle(true);
+        animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
 	override protected void Update () {
         base.Update();
+        float soundRoll = Random.Range(0f, 1f);
+        if (PlayerInSoundRange() && soundRoll > soundChance)
+        {
+            Debug.Log("Playing Idle");
+            playIdle();
+        }
         switch (state) {
             case State.Idle:
-                //Debug.Log("Idle");
                 if (PlayerInRange())
                     StartFollowing();
                 break;
@@ -52,13 +67,21 @@ public class GreenBlob : Blob, ISoundReactive
         return (player.transform.position - transform.position).magnitude < range;
     }
 
+    bool PlayerInSoundRange()
+    {
+        return (player.transform.position - transform.position).magnitude < soundRange;
+    }
+
     void StartFollowing()
     {
         player.HasGreenFollower = true;
         state = State.Following;
         setIdle(false);
 
-        GetComponent<AudioSource>().Play();
+        animator.SetTrigger("Happy");
+
+        audioSource.clip = followSound;
+        audioSource.Play();
     }
 
     void Follow()
@@ -74,6 +97,9 @@ public class GreenBlob : Blob, ISoundReactive
             state = State.Cooldown;
             cooldownStart = Time.time;
             player.HasGreenFollower = false;
+            animator.SetTrigger("Upset");
+            audioSource.clip = stopFollowingSound;
+            audioSource.Play();
         }
     }
 
@@ -82,5 +108,12 @@ public class GreenBlob : Blob, ISoundReactive
         base.OnDestroy();
         if (state == State.Following)
             player.HasGreenFollower = false;
+    }
+
+
+    void playIdle()
+    {
+        audioSource.clip = idleSound;
+        audioSource.Play();
     }
 }
