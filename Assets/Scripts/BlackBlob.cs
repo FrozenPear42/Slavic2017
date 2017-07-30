@@ -10,11 +10,13 @@ public class BlackBlob : Blob
     bool isRedAbsorbed;
     bool isBlueAbsorbed;
 
+    Animator animator;
+
     // Use this for initialization
     override protected void Start()
     {
         base.Start();
-
+        animator = GetComponentInChildren<Animator>();
         bool isGreenAbsorbed = false;
         bool isRedAbsorbed = false;
         bool isBlueAbsorbed = false;
@@ -34,18 +36,21 @@ public class BlackBlob : Blob
             Destroy(collision.gameObject);
             isBlueAbsorbed = true;
             GetComponent<AudioSource>().Play();
+            animator.SetTrigger("Eat");
         }
         if (blob != null && blob.GetType() == typeof(GreenBlob) && !isGreenAbsorbed)
         {
             Destroy(collision.gameObject);
             isGreenAbsorbed = true;
             GetComponent<AudioSource>().Play();
+            animator.SetTrigger("Eat");
         }
         if (blob != null && blob.GetType() == typeof(RedBlob) && !isRedAbsorbed)
         {
             Destroy(collision.gameObject);
             isRedAbsorbed = true;
             GetComponent<AudioSource>().Play();
+            animator.SetTrigger("Eat");
         }
 
         if (isGreenAbsorbed && isRedAbsorbed && isBlueAbsorbed)
