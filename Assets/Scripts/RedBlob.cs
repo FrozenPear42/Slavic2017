@@ -5,11 +5,13 @@ using UnityEngine;
 public class RedBlob : Blob, ISoundReactive
 {
     public GameObject blobPrefab;
+    public Animator animator;
 
     // Use this for initialization
     override protected void Start()
     {
         base.Start();
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class RedBlob : Blob, ISoundReactive
     {
         addChargeForce(player.gameObject.transform.position - transform.position, 20 * movementSpeed);
         //base.moveToPosition(player.gameObject.transform.position, base.movementSpeed, 2f);
+        animator.SetTrigger("Happy");
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -42,6 +45,7 @@ public class RedBlob : Blob, ISoundReactive
             var playerBody = player.GetComponent<Rigidbody>();
             playerBody.AddForce(player.baseForce * 0.5f  * -playerBody.velocity);
             GetComponent<AudioSource>().Play();
+            animator.SetTrigger("Upset");
         }
     }
 }
