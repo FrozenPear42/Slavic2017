@@ -74,6 +74,7 @@ public class Rock : MonoBehaviour, ISoundReactive
         {
             GetComponent<AudioSource>().clip = hitSound;
             GetComponent<AudioSource>().Play();
+            GetComponent<Animator>().SetTrigger("Shake");
         }
     }
 
