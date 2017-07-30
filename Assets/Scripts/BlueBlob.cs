@@ -24,7 +24,7 @@ public class BlueBlob : Blob {
             isGoingToBeIdle = false;
             Vector3 diff = transform.position - avg;
             base.addForce(diff, run_speed/diff.magnitude, base.baseForce);
-            //TODO: GetComponent<AudioSource>().Play(); gdzies to trzeba by wrzucicc
+            GetComponent<AudioSource>().Play(); //TODO: gdzies to trzeba by wrzucicc
         }
         else if (!isGoingToBeIdle){
             isGoingToBeIdle = true;
