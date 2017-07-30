@@ -609,11 +609,12 @@ MonoBehaviour:
   scanRange: 10
   movementSpeed: 20
   cooldownPeriodInSeconds: 4
-  baseForce: 100
+  baseForce: 500
   mainColor: {r: 1, g: 0, b: 0.020689487, a: 0}
   rimColor: {r: 1, g: 0.09558821, b: 0.09558821, a: 0}
   rimPower: 2.2
   blobPrefab: {fileID: 1056361333809744, guid: f112c7938f0c11646936b109ae46fc82, type: 2}
+  animator: {fileID: 0}
 --- !u!122 &122091351362589576
 Halo:
   m_ObjectHideFlags: 1
