@@ -614,7 +614,7 @@ MonoBehaviour:
   rimColor: {r: 1, g: 1, b: 1, a: 0}
   rimPower: 2.2
   targetSlot: {fileID: 0}
-  pullingSpeed: 1
+  pullingSpeed: 0.01
 --- !u!122 &122226148331503496
 Halo:
   m_ObjectHideFlags: 1
