@@ -515,7 +515,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7051d1eb50f574abb8d93b67118dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanRange: 10
+  scanRange: 5
   movementSpeed: 20
   cooldownPeriodInSeconds: 4
   baseForce: 500
@@ -616,6 +616,7 @@ MonoBehaviour:
   player_wage: 5
   run_speed: 40
   eps: 1
+  soundRange: 40
   isGoingToBeIdle: 0
 --- !u!122 &122028397829583676
 Halo:

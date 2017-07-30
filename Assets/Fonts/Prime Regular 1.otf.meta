@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dcecdfdc898eded458b8a32bb799624e
+timeCreated: 1501357249
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Prime
+  fontNames:
+  - Prime
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 977a9ee824fcde54cbfec8e4851dddb9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

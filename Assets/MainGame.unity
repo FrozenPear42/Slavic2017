@@ -305,7 +305,7 @@ Transform:
   - {fileID: 644924080}
   - {fileID: 1928309665}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &421489707
 GameObject:
@@ -395,7 +395,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 61.895004, y: -0.19900002, z: 6.1600003}
 --- !u!114 &421489713
 MonoBehaviour:
@@ -501,7 +501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4267142406744374, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.87
+      value: 2.42
       objectReference: {fileID: 0}
     - target: {fileID: 4267142406744374, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
       propertyPath: m_LocalPosition.z
@@ -539,7 +539,7 @@ Prefab:
     - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
         type: 2}
       propertyPath: spawn_radius
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
         type: 2}
@@ -597,7 +597,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4955367067128208, guid: 85f9df98046d4634784ae79751ca6dd9, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114479299005751116, guid: 85f9df98046d4634784ae79751ca6dd9,
         type: 2}
@@ -712,7 +712,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4513578404352774, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573101733877092, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 3.4939249
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573101733877092, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593927195904908, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 4.346098
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593927195904908, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742360709761530, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 4.321992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742360709761530, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -7.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463672141254506, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.8948894
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463672141254506, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -6.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742360709761530, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 23.230484
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593927195904908, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 19.078764
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463672141254506, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 17.626759
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d4b7bb36eee73242a2bb452a3752b18, type: 2}
@@ -759,6 +803,11 @@ Prefab:
     - target: {fileID: 1062983934113906, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
       propertyPath: m_Name
       value: BlobSpawnerGreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462252397503714, guid: 7d5aece15f89eea4da682d9b99e1ebae,
+        type: 2}
+      propertyPath: spawn_radius
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d5aece15f89eea4da682d9b99e1ebae, type: 2}
