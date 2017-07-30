@@ -457,8 +457,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243986148215119432, guid: bfea4ed204a432d4aaa8a90f6c1e55b7,
     type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: caf90fc2678bd9d40aa7fcc5a69ceea3, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -616,6 +616,7 @@ MonoBehaviour:
   player_wage: 5
   run_speed: 40
   eps: 1
+  isGoingToBeIdle: 0
 --- !u!122 &122028397829583676
 Halo:
   m_ObjectHideFlags: 1

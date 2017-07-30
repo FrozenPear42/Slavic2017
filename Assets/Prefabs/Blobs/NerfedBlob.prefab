@@ -158,8 +158,8 @@ GameObject:
   - component: {fileID: 4544685750040874}
   - component: {fileID: 135073502710619426}
   - component: {fileID: 54484297282986794}
-  - component: {fileID: 114277378743780126}
   - component: {fileID: 82825776232111698}
+  - component: {fileID: 114301970546855720}
   m_Layer: 9
   m_Name: NerfedBlob
   m_TagString: Untagged
@@ -415,7 +415,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!54 &54722392838292786
 Rigidbody:
@@ -595,7 +595,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114277378743780126
+--- !u!114 &114301970546855720
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -603,19 +603,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1733007534958822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e892d3cff8474c4880aedab9b666428, type: 3}
+  m_Script: {fileID: 11500000, guid: fff64df257a52a841aa78459221bcaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scanRange: 10
   movementSpeed: 20
   cooldownPeriodInSeconds: 4
   baseForce: 100
-  mainColor: {r: 0.07352942, g: 0.07352942, b: 0.07352942, a: 0}
-  rimColor: {r: 0.1397059, g: 0.1397059, b: 0.1397059, a: 0}
+  mainColor: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 0}
+  rimColor: {r: 0.08088237, g: 0.08088237, b: 0.08088237, a: 0}
   rimPower: 2.2
-  whiteBlobPrefab: {fileID: 1191562316981864, guid: 4b7f1f3fc2bf35c428b52be85e3fbe01,
-    type: 2}
-  whiteSlot: {fileID: 0}
 --- !u!122 &122805858374775650
 Halo:
   m_ObjectHideFlags: 1

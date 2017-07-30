@@ -31,7 +31,10 @@ public class BlobSpawner : MonoBehaviour {
 
     void SpawnBlob() {
         Vector3 spawn_vector = Random.insideUnitCircle * spawn_radius;
+
+        spawn_vector.z = spawn_vector.y;
         spawn_vector.y = 0;
+
         GameObject blob = Instantiate(blob_prefab, transform.position + spawn_vector, Quaternion.identity, transform);
         list_of_blobs.Add(blob);
     }

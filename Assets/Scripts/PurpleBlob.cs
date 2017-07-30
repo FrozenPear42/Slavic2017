@@ -21,6 +21,7 @@ public class PurpleBlob : Blob, ISoundReactive {
         base.Start();
         player = FindObjectOfType<Player>();
         base.setIdle(true);
+        GetComponent<AudioSource>().Play();
     }
 
     public void ForceStart()
@@ -61,7 +62,7 @@ public class PurpleBlob : Blob, ISoundReactive {
     {
         player.HasAnyFollower = true;
         state = State.Following;
-        GetComponent<AudioSource>().Play();
+
     }
 
     void Follow()
