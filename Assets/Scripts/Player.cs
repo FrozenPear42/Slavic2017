@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
 using System.Xml.Serialization;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -45,16 +44,13 @@ public class Player : MonoBehaviour
         get { return hasGreenFollower; }
         set
         {
-            Debug.Log("Value: " + value);
             if (value == true)
             {
-                Debug.Log("Incrementing");
                 ++greenFollowersCount;
                 ++anyFollowersCount;
             }
             else
             {
-                Debug.Log("Derementing");
                 --greenFollowersCount;
                 --anyFollowersCount;
             }

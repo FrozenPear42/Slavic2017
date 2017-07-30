@@ -6,12 +6,19 @@ public class WhiteBlob : Blob
 {
 
     public GameObject targetSlot;
+    public float pullingSpeed = 10f;
 
     // Use this for initialization
-    override protected void Start()
+    protected override void Start()
     {
         base.Start();
-        moveToPosition(targetSlot.transform.position, movementSpeed, 1f);
+        setIdle(false);
         GetComponent<AudioSource>().Play();
+    }
+
+    protected override void Update()
+    {
+        if(targetSlot != null)
+            transform.position = Vector3.Lerp(transform.position, targetSlot.transform.position, pullingSpeed*Time.deltaTime);        
     }
 }

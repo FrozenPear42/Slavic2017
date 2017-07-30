@@ -29,17 +29,23 @@ public class BlackBlob : Blob
     public void OnCollisionEnter(Collision collision)
     {
         var blob = collision.gameObject.GetComponent<Blob>();
-        if (blob != null && blob.GetType() == typeof(BlueBlob) && !isBlueAbsorbed) {
+        if (blob != null && blob.GetType() == typeof(BlueBlob) && !isBlueAbsorbed)
+        {
             Destroy(collision.gameObject);
             isBlueAbsorbed = true;
+            GetComponent<AudioSource>().Play();
         }
-        if (blob != null && blob.GetType() == typeof(GreenBlob) && !isGreenAbsorbed) {
+        if (blob != null && blob.GetType() == typeof(GreenBlob) && !isGreenAbsorbed)
+        {
             Destroy(collision.gameObject);
             isGreenAbsorbed = true;
+            GetComponent<AudioSource>().Play();
         }
-        if (blob != null && blob.GetType() == typeof(RedBlob) && !isRedAbsorbed) {
+        if (blob != null && blob.GetType() == typeof(RedBlob) && !isRedAbsorbed)
+        {
             Destroy(collision.gameObject);
             isRedAbsorbed = true;
+            GetComponent<AudioSource>().Play();
         }
 
         if (isGreenAbsorbed && isRedAbsorbed && isBlueAbsorbed)
@@ -53,10 +59,13 @@ public class BlackBlob : Blob
         }
     }
 
-    GameObject FindWhiteSlot() {
+    GameObject FindWhiteSlot()
+    {
         Slot[] slots = FindObjectsOfType<Slot>();
-        foreach (Slot slot in slots) {
-            if (slot.gameObject.name == "WhiteSlot") {
+        foreach (Slot slot in slots)
+        {
+            if (slot.gameObject.name == "WhiteSlot")
+            {
                 return slot.gameObject;
             }
         }

@@ -47,7 +47,8 @@ public class Slot : MonoBehaviour {
 
     void SetPullingBlob(GameObject blob) {
         blob.GetComponent<Blob>().enabled = false;
-        blob.GetComponent<Collider>().enabled = false;
+//blob.GetComponent<Collider>().enabled = false;
+        Destroy(blob.GetComponent<Rigidbody>());
 
         pulling_blob = blob;
         pulling_start_position = pulling_blob.transform.position;

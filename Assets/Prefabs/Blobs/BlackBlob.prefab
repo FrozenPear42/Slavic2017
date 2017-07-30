@@ -457,8 +457,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243986148215119432, guid: bfea4ed204a432d4aaa8a90f6c1e55b7,
     type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: d90da22c19f7e3342b7e522462581a03, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
   scanRange: 10
   movementSpeed: 20
   cooldownPeriodInSeconds: 4
-  baseForce: 100
+  baseForce: 500
   mainColor: {r: 0.07352942, g: 0.07352942, b: 0.07352942, a: 0}
   rimColor: {r: 0.1397059, g: 0.1397059, b: 0.1397059, a: 0}
   rimPower: 2.2
