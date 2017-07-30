@@ -20,16 +20,21 @@ public class Rock : MonoBehaviour, ISoundReactive
     void Start()
     {
         rockBody = GetComponent<Rigidbody>();
-        Invoke("SetKinematic",setKinematicAfterTime);
+        Invoke("SetKinematic", setKinematicAfterTime);
     }
 
     public float maxSpeed = 1f;
     public float maxAngularSpeed = 0.2f;
 
+    public AudioClip hitSound;
+    public AudioClip crashSound;
+
+
     int collision_counter = 0;
     bool collided = false;
 
-    void Update() {
+    void Update()
+    {
         /*Rigidbody rigid = GetComponent<Rigidbody>();
         if (rigid.velocity.magnitude > maxSpeed) {
             rigid.velocity = Vector3.ClampMagnitude(rigid.velocity, maxSpeed);
@@ -63,7 +68,13 @@ public class Rock : MonoBehaviour, ISoundReactive
 
         if (hitCount >= targetHitCount)
         {
+ 
             spawnBlackBlob();
+        }
+        else
+        {
+            GetComponent<AudioSource>().clip = hitSound;
+            GetComponent<AudioSource>().Play();
         }
     }
 
@@ -76,7 +87,8 @@ public class Rock : MonoBehaviour, ISoundReactive
         Destroy(gameObject);
     }
 
-    void SetKinematic() {
+    void SetKinematic()
+    {
         GetComponent<Rigidbody>().isKinematic = true;
     }
 
