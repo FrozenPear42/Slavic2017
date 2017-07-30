@@ -38,7 +38,6 @@ public class GreenBlob : Blob, ISoundReactive
         float soundRoll = Random.Range(0f, 1f);
         if (PlayerInSoundRange() && soundRoll > soundChance)
         {
-            Debug.Log("Playing Idle");
             playIdle();
         }
         switch (state) {

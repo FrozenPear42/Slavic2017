@@ -11,9 +11,19 @@ public class PurpleBlob : Blob, ISoundReactive {
     public float cooldown;
     public float speed;
 
+    public float soundChance;
+    public float soundRange;
+
+    public AudioClip idleSound;
+    public AudioClip followSound;
+    public AudioClip stopFollowingSound;
+    AudioSource audioSource;
+
     enum State { Idle, Following, Cooldown };
     State state = State.Idle;
     float cooldownStart = 0.0f;
+    Animator animator;
+
 
     // Use this for initialization
     override protected void Start()
@@ -22,6 +32,8 @@ public class PurpleBlob : Blob, ISoundReactive {
         player = FindObjectOfType<Player>();
         base.setIdle(true);
         GetComponent<AudioSource>().Play();
+        animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void ForceStart()
@@ -62,7 +74,12 @@ public class PurpleBlob : Blob, ISoundReactive {
     {
         player.HasAnyFollower = true;
         state = State.Following;
+        setIdle(false);
 
+        animator.SetTrigger("Happy");
+
+        audioSource.clip = followSound;
+        audioSource.Play();
     }
 
     void Follow()
@@ -78,6 +95,9 @@ public class PurpleBlob : Blob, ISoundReactive {
             state = State.Cooldown;
             cooldownStart = Time.time;
             player.HasAnyFollower = false;
+            animator.SetTrigger("Upset");
+            audioSource.clip = stopFollowingSound;
+            audioSource.Play();
         }
     }
 
@@ -86,5 +106,11 @@ public class PurpleBlob : Blob, ISoundReactive {
         base.OnDestroy();
         if (state == State.Following)
             player.HasAnyFollower = false;
+    }
+
+    void playIdle()
+    {
+        audioSource.clip = idleSound;
+        audioSource.Play();
     }
 }

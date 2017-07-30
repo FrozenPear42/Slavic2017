@@ -617,6 +617,11 @@ MonoBehaviour:
   range: 2
   cooldown: 3
   speed: 10
+  soundChance: 0
+  soundRange: 0
+  idleSound: {fileID: 8300000, guid: d232d41f05714e14bbeab6bee4bc611b, type: 3}
+  followSound: {fileID: 8300000, guid: 61196f5db7ad4614aa3c9b7afc01d172, type: 3}
+  stopFollowingSound: {fileID: 8300000, guid: c273852519f016741be5bd6c73d99352, type: 3}
 --- !u!122 &122379306739013560
 Halo:
   m_ObjectHideFlags: 1

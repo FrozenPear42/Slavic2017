@@ -615,6 +615,7 @@ MonoBehaviour:
   rimPower: 2.2
   blobPrefab: {fileID: 1056361333809744, guid: f112c7938f0c11646936b109ae46fc82, type: 2}
   animator: {fileID: 0}
+  chargeSound: {fileID: 8300000, guid: 1b49a8d8274a0dd4da2a9ca5c27cba40, type: 3}
 --- !u!122 &122091351362589576
 Halo:
   m_ObjectHideFlags: 1
