@@ -29,7 +29,10 @@ public class EndGameScript : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Player>() != null)
+        {
             stayTime = 0f;
+            other.gameObject.GetComponent<EndGameScreenFlash>().MineHit();
+        }
     }
 
     private void OnTriggerStay(Collider other)
