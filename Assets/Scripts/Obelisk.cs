@@ -18,6 +18,7 @@ public class Obelisk : MonoBehaviour {
         if(successes == 5)
         {
             GetComponent<Animator>().SetTrigger("Open");
+            GetComponent<AudioSource>().Play();
         }
     }
 }
