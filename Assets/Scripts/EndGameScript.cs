@@ -8,6 +8,9 @@ public class EndGameScript : MonoBehaviour {
     private float stayTime;
     public float endGameAfterStaying;
 
+    public CanvasGroup myCG;
+    private bool flash = false;
+
     private AsyncOperation endSceneOperation;
 
 	// Use this for initialization
@@ -18,7 +21,16 @@ public class EndGameScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(stayTime > endGameAfterStaying)
+	    if (flash)
+	    {
+	        myCG.alpha = myCG.alpha + Time.deltaTime;
+	        if (myCG.alpha >= 1)
+	        {
+	            flash = false;
+	        }
+	    }
+
+        if (stayTime > endGameAfterStaying)
         {
             endSceneOperation.allowSceneActivation = true;
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("EndScene"));
@@ -31,7 +43,7 @@ public class EndGameScript : MonoBehaviour {
         if (other.gameObject.GetComponent<Player>() != null)
         {
             stayTime = 0f;
-            other.gameObject.GetComponent<EndGameScreenFlash>().MineHit();
+            MineHit();
         }
     }
 
@@ -39,5 +51,11 @@ public class EndGameScript : MonoBehaviour {
     {
         if (other.gameObject.GetComponent<Player>() != null)
             stayTime += Time.deltaTime;
+    }
+
+    public void MineHit()
+    {
+        flash = true;
+        myCG.alpha = 0;
     }
 }
